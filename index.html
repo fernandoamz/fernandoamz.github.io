@@ -32,6 +32,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-darkbg font-montserrat text-textlight">
+  <canvas id="galaxy-bg" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
 
   <!-- NAVBAR -->
   <header class="fixed top-0 w-full z-50 bg-darkbg shadow-md">
@@ -401,6 +402,77 @@
 
   // Initialize
   showTestimonial(0);
+
+    // Galaxy background animation
+  const canvas = document.getElementById('galaxy-bg');
+  const ctx = canvas.getContext('2d');
+  let stars = [];
+  const STAR_COUNT = 120;
+  const STAR_COLOR = "#fff";
+  const STAR_SIZE = 1.5;
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  function createStars() {
+    stars = [];
+    for (let i = 0; i < STAR_COUNT; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        z: Math.random() * canvas.width,
+        o: 0.5 + Math.random() * 0.5,
+        r: STAR_SIZE + Math.random() * 1.5,
+        speed: 0.5 + Math.random() * 0.50
+      });
+    }
+  }
+  createStars();
+
+  function drawStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let star of stars) {
+      ctx.globalAlpha = star.o;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+      ctx.fillStyle = STAR_COLOR;
+      ctx.shadowColor = "#fff";
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.closePath();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function animateStars() {
+    for (let star of stars) {
+      star.y += star.speed + window.scrollY * 0.000003;
+      if (star.y > canvas.height) {
+        star.x = Math.random() * canvas.width;
+        star.y = 0;
+        star.r = STAR_SIZE + Math.random() * 1.5;
+        star.o = 0.5 + Math.random() * 0.5;
+        star.speed = 0.2 + Math.random() * 0.5;
+      }
+    }
+  }
+
+  function loop() {
+    animateStars();
+    drawStars();
+    requestAnimationFrame(loop);
+  }
+  loop();
+
+  // Recreate stars on resize for responsiveness
+  window.addEventListener('resize', () => {
+    resizeCanvas();
+    createStars();
+  });
   </script>
 
   <input type="hidden" value="1993-08-14" id="dob" name="dob" />
