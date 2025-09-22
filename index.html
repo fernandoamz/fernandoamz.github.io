@@ -1,569 +1,409 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>¡Welcome!</title>
-    <meta name="description" content=""/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/aos.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles/main.css" rel="stylesheet">
-  </head>
-  <body id="top">
-    <header>
-      <div class="profile-page sidebar-collapse">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
-          <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="#" rel="tooltip">¡Welcome!</a>
-              <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navigation">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#skill">Skills</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Welcome!</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="styles/main.css" />
+  <link href="css/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0d6efd',
+            secondary: '#6c757d',
+            darkbg: '#1a1a1a',
+            cardbg: '#222222',
+            textlight: '#f5f5f5',
+            textsecondary: '#cfcfcf'
+          },
+          fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-darkbg font-montserrat text-textlight">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full z-50 bg-darkbg shadow-md">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
+      <a href="#" class="text-2xl font-bold text-textlight">¡Welcome!</a>
+      <button id="navbar-toggle" class="text-textlight md:hidden focus:outline-none">
+        <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
+        <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
+        <span class="block w-6 h-0.5 bg-textlight"></span>
+      </button>
+      <ul id="navbar-menu" class="hidden md:flex space-x-6 font-medium">
+        <li><a href="#about" class="hover:text-primary transition">About</a></li>
+        <li><a href="#skill" class="hover:text-primary transition">Skills</a></li>
+        <li><a href="#experience" class="hover:text-primary transition">Experience</a></li>
+        <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    // Toggle mobile menu
+    const toggleButton = document.getElementById('navbar-toggle');
+    const menu = document.getElementById('navbar-menu');
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('images/cc-bg-1.jpg');">
+    <div class="absolute inset-0 pointer-events-none"></div>
+    <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
+      <div class="cc-profile-image w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-red-400 mb-4">
+        <a href="#"><img src="images/fernando.jpg" alt="Fernando Amezcua" class="w-full h-full object-cover" alt="Image"></a>
       </div>
-    </header>
+      <h1 class="text-3xl md:text-5xl font-bold mb-2">Fernando Amezcua Alcantar</h1>
+      <p class="text-lg md:text-2xl mb-6 text-white">Senior React Native Developer</p>
+      <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank"
+         class="bg-cardbg text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+         Download CV
+      </a>
+      <div class="flex space-x-4 mt-6">
+        <a href="https://github.com/fernandoamz" target="_blank"
+          class="bg-cardbg text-textlight rounded-full hover:bg-gray-700 transition flex items-center justify-center w-12 h-12">
+          <i class="fab fa-github text-xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/fernandoamz" target="_blank"
+          class="bg-cardbg text-blue-400 rounded-full hover:bg-gray-700 transition flex items-center justify-center w-12 h-12">
+          <i class="fab fa-linkedin text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <div class="page-content">
-    <div>
-
-    <div class="profile-page">
-      <div class="wrapper">
-        <div class="page-header page-header-small" filter-color="green">
-          <div class="page-header-image" data-parallax="true" style="background-image: url('images/cc-bg-1.jpg');"></div>
-          <div class="container">
-            <div class="content-center">
-              <div class="cc-profile-image"><a href="#">
-                <img src="images/fernando.jpg" alt="Image" />
-              </a></div>
-              <div class="h2 title">Fernando Amezcua Alcantar</div>
-              <p class="category text-white">Senior React Native Developer</p>
-              <a
-                class="btn btn-primary"
-                href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf"
-                target="_blank"
-                data-aos="zoom-in"
-                data-aos-anchor="data-aos-anchor">Download CV</a>
-            </div>
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16">
+    <h2 class="text-2xl font-bold text-center mb-8 text-textlight">About Me!</h2>
+    <div class="container mx-auto px-4">
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full lg:w-1/2 px-4 mb-6 lg:mb-0">
+            <h2 class="text-2xl font-bold mb-4 text-textlight">About</h2>
+            <p class="text-textsecondary text-justify">
+              Senior Mobile Engineer with over 8 years of experience building high-quality iOS and cross-platform applications.
+              Proficient in Swift, React Native, Node.js, and Firebase, with a strong background in scalable backend systems,
+              RESTful APIs, and serverless architectures. Passionate about crafting performant and user-centric mobile experiences.
+              In 2020, mentored junior developers at Bright Coders to help grow new mobile talent.
+            </p>
           </div>
-          <div class="section">
-            <div class="container">
-              <div class="button-container">
-              <a
-                class="btn btn-default btn-round btn-lg btn-icon"
-                href="https://github.com/fernandoamz"
-                rel="tooltip"
-                title="Github"
-              >
-              <i class="fa fa-github"></i></a>
-              <a
-                class="btn btn-default btn-round btn-lg btn-icon"
-                href="https://www.linkedin.com/in/fernandoamz"
-                rel="tooltip"
-                title="Linkedin"
-              >
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </div>
-            </div>
+          <div class="w-full lg:w-1/2 px-4">
+            <h2 class="text-2xl font-bold mb-4 text-textlight">Basic Information</h2>
+            <ul class="text-textsecondary space-y-2">
+              <li><strong>Age:</strong> <span id="age"></span></li>
+              <li><strong>Email:</strong> fernandoamz148@gmail.com</li>
+              <li><strong>Address:</strong> Colima, México</li>
+              <li><strong>Language:</strong> Spanish, English</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
- 
-    <div class="section" id="about">
-      <div class="container">
-        <div class="card" data-aos="fade-up" data-aos-offset="10">
-          <div class="row">
-            <div class="col-lg-6 col-md-12">
-              <div class="card-body">
-                <div class="h4 mt-0 title">About</div>
-                <p align="justify">
-                  ​​Senior Mobile Engineer with over 8 years of experience building high-quality iOS and cross-platform applications. Proficient in Swift, React Native, Node.js, and Firebase, 
-                  with a strong background in scalable backend systems, RESTful APIs, and serverless architectures. 
-                  Passionate about crafting performant and user-centric mobile experiences. In 2020, mentored junior developers at Bright Coders to help grow new mobile talent.
-                </p>
-              </div>
-            </div>
-            <input type="hidden" value="1993-08-14" id="dob" name="dob" />
-            <div class="col-lg-6 col-md-12">
-              <div class="card-body">
-                <div class="h4 mt-0 title">Basic Information</div>
-                <div class="row">
-                  <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-                  <div class="col-sm-8">
-                    <div id="age"></div>
-                  </div>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                  <div class="col-sm-8">fernandoamz148@gmail.com</div>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                  <div class="col-sm-8">Colima, México</div>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                  <div class="col-sm-8">Spanish, English</div>
-                </div>
-              </div>
-            </div>
-          </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skill" class="py-16 bg-darkbg">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Professional Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <h3 class="text-lg font-semibold mb-2 text-textlight">React Native</h3>
+        <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
+          <div class="bg-red-400 h-4 rounded-full w-[90%]"></div>
         </div>
+        <span class="text-sm text-textsecondary">Expert</span>
       </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="section" id="skill">
-      <div class="container">
-        <div class="h4 text-center mb-4 title">Professional Skills</div>
-        <div
-          class="card"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-        >
-          <div class="card-body">
-            <div class="row">
-              <!-- Main Skills -->
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">React Native</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 90%;"
-                    ></div>
-                    <span class="progress-value">Expert</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">React</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 85%;"
-                    ></div>
-                    <span class="progress-value">Advanced</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">JavaScript / TypeScript</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 85%;"
-                    ></div>
-                    <span class="progress-value">Advanced</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">Node.js</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 75%;"
-                    ></div>
-                    <span class="progress-value">Advanced</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">Databases (Realm, SQL, Postgres)</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 70%;"
-                    ></div>
-                    <span class="progress-value">Proficient</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">CI/CD & Cloud (AWS / GCP)</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 65%;"
-                    ></div>
-                    <span class="progress-value">Proficient</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Secondary -->
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">AR Development (ViroReact)</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 60%;"
-                    ></div>
-                    <span class="progress-value">Intermediate</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="progress-container progress-primary">
-                  <span class="progress-badge">Ruby on Rails</span>
-                  <div class="progress">
-                    <div
-                      class="progress-bar progress-bar-primary"
-                      data-aos="progress-full"
-                      data-aos-offset="10"
-                      data-aos-duration="2000"
-                      role="progressbar"
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="width: 50%;"
-                    ></div>
-                    <span class="progress-value">Basic</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <h3 class="text-lg font-semibold mb-2 text-textlight">React</h3>
+        <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
+          <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
         </div>
+        <span class="text-sm text-textsecondary">Advanced</span>
       </div>
-    </div>
-
-
-    <!-- EXPERIENCE -->
-    <div class="section" id="experience">
-      <div class="container cc-experience">
-        <div class="h4 text-center mb-4 title">Work Experience</div>
-          <div class="card">
-            <div class="row">
-              <div
-                class="col-md-3 bg-primary"
-                data-aos="fade-right"
-              >
-                <div class="card-body cc-experience-header">
-                  <p>Nov 2023 - Present</p>
-                  <div class="h5">Encora México</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left">
-                <div class="card-body">
-                  <div class="h5">Encora Inc - Senior React Native Developer, VoCap By AutoTune</div>
-                  <ul>
-                    <li>Co-led VoCap with Staff Engineer app using React Native and Audio Native iOS modules.</li>
-                    <li>Optimized audio performance with AudioEngine and JUCE.</li>
-                    <li>Scaled the application to 20K+ installs and maintained a 3.7-star rating across diverse user segments, demonstrating consistent adoption and measurable user satisfaction.</li>
-                    <li>Delivered the app to the stores, implementing new features and bringing the product to market.</li>
-                    <li>Developed a custom gallery module to retrieve and manage videos and audio files directly from the device.</li>
-                    <li>Enhanced the video and audio capture flow in React Native by integrating native iOS modules.</li>
-                    <li>Helped to supervise the new releases and semantic versioning.</li>
-                    <li>Built the A/B testing infrastructure with feature flags in Firebase.</li>
-                  </ul>
-                  <a target="_blank" href="https://www.encora.com/">Encora Website</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-experience-header">
-                <p>Dec 2021 - Nov 2023</p>
-                <div class="h5">Luxoft México, DXC Company</div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-                <div class="h5">React Native, GHX Platform</div>
-                <ul>
-                  <li>Cut crash rate from 10% to &lt;3% and enhanced API request performance.</li>
-                  <li>Developed modular map components and standardized global state management using Redux.</li>
-                  <li>Optimized map rendering performance during GeoJSON data retrieval with Redux Toolkit.</li>
-                  <li>Centralized all API requests in the app using Redux Thunk.</li>
-                  <li>Applied A/B testing for new features.</li>
-                  <li>Contributed to micro frontends by adding native iOS/Android features.</li>
-                </ul>
-                <a target="_blank" href="https://www.luxoft.com/">Luxoft Website</a>
-              </div>
-            </div>
-          </div>
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <h3 class="text-lg font-semibold mb-2 text-textlight">JavaScript / TypeScript</h3>
+        <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
+          <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
         </div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-experience-header">
-                <p>Jan 2020 - Nov 2021</p>
-                <div class="h5">
-                  MagmaLabs
-                </div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-                <div class="card-body">
-                  <div class="h5">Software Engineer – Beanstack & Quik for GoPro</div>
-                  <ul>
-                    <li>Led gamification and subscriptions for the Beanstack app.</li>
-                    <li>Architected scalable code and implemented CI/CD pipelines.</li>
-                    <li>Built Quik for GoPro using Next.js, TypeScript, OAuth2, and Adyen.</li>
-                    <li>Resolved on-demand service requests promptly, meeting all deadlines.</li>
-                    <li>Solved Server-Side Rendering challenges and deployed to AWS and Datadog services.</li>
-                  </ul>
-                </div>
-                <p>
-                 <a target="_blank" href="https://www.magmalabs.io">MAGMALABS</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-experience-header">
-                <p>October 2017 - January 2019</p>
-                <div class="h5">
-                  Logística Woodward 
-                </div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-              <div class="h5">Head of Mobile Development / Fullstack Developer</div>
-              <ul>
-                <li>Led the Mobile Development department, managing the full live mobile cycle.</li>
-                <li>Built a multimedia documentation system using React, Next.js, MSSQL, MySQL, Redux, and Redux Thunk.</li>
-                <li>Developed two React Native apps for logistics teams, published on the Play Store.</li>
-                <li>Designed and implemented fullstack solutions, integrating front-end and back-end with scalable APIs and databases.</li>
-                <li>Collaborated with non-technical stakeholders to gather requirements and implement technical solutions.</li>
-                <li>Maintained production, staging, and test environments, managing Linux infrastructure on VPS servers.</li>
-              </ul>
-              <p>
-                <a target="_blank" href="http://woodward.mx/">WOODWARD WEBSITE</a>
-              </p>
-            </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-experience-header">
-                <p>December 2016 - October 2017</p>
-                <div class="h5">Desarrollo 80</div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-              <div class="h5">Fullstack Developer</div>
-              <ul>
-                <li>Developed UIs using PHP, JavaScript, Dojo, and REST APIs.</li>
-                <li>Built reusable components and supported a modular design approach.</li>
-                <li>Collaborated with non-technical stakeholders to gather requirements and communicate technical limitations and opportunities effectively.</li>
-                <li>Contributed to architecture, testing, and requirements discussions.</li>
-              </ul>
-               <a
-                  href="http://www.d80.mx/"
-                 >
-                  D80
-                 </a>
-            </div>
-            </div>
-          </div>
-        </div>
+        <span class="text-sm text-textsecondary">Advanced</span>
       </div>
-    </div>
-
-    <div class="section">
-      <div class="container cc-education">
-        <div class="h4 text-center mb-4 title">Education</div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-education-header">
-                <p>2013-2017</p>
-                <div class="h5">IT Engineer</div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-                <div class="h5">Information Technologies Engineer</div>
-                <p class="category">Universidad Tecnológica de Manzanillo</p>
-                <p>
-                  The Technology Information Engineer is a professional with capabilities to develop mobile applications,
-                  object oriented apps and responsive websites connected with a database.
-                </p>
-                <p>
-                  <a
-                   href="https://utem.edu.mx/"
-                   target="_blank"
-                  >
-                    UTEM WEBSITE
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <h3 class="text-lg font-semibold mb-2 text-textlight">Node.js</h3>
+        <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
+          <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
         </div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-education-header">
-                <p>2018</p>
-                <div class="h5">Bright Coders</div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-                <div class="h5">Bright Coders</div>
-                <p class="category">MagmaLabs</p>
-                <p>
-                  An intensive on-site mentoring program designed to train talented software developers
-                  who adopt the best programming practices, working with agile methodologies, having team work experience, developing projects
-                  in real environments, and who passionate and contribute to the community.
-                </p>
-                <p>
-                  <a
-                   href="./docs/brigthcoders.pdf"
-                   target="_blank"
-                  >
-                    CERTIFICATE
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <span class="text-sm text-textsecondary">Advanced</span>
       </div>
-    </div>
-
-    <div class="section" id="contact">
-      <div class="cc-contact-information" style="background-image: url('images/staticmap.jpg');">
-        <div class="container">
-          <div class="cc-contact">
-            <div class="row">
-              <div class="col-md-9">
-                <div class="card mb-0" data-aos="zoom-in">
-                  <div class="h4 text-center title">Contact Me</div>
-                  <div class="row">
-                    <div class="col-md-12 text-center">
-                      <div class="card-body">
-                        <div class="p pb-3"><strong>Feel free to contact me </strong></div>
-                        <p class="mb-0"><strong>Address </strong></p>
-                        <p class="pb-2">Colima, México</p>
-                        <p class="mb-0"><strong>Email</strong></p>
-                        <p>fernandoamz148@gmail.com</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <h3 class="text-lg font-semibold mb-2 text-textlight">Databases (Realm, SQL, Postgres)</h3>
+        <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
+          <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
         </div>
+        <span class="text-sm text-textsecondary">Proficient</span>
       </div>
-    </div>
-
+      <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <h3 class="text-lg font-semibold mb-2 text-textlight">CI/CD & Cloud (AWS / GCP)</h3>
+        <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
+          <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
+        </div>
+        <span class="text-sm text-textsecondary">Proficient</span>
+      </div>
     </div>
   </div>
+</section>
 
-    <footer class="footer">
-      <div class="container text-center">
-        <a class="cc-facebook btn btn-link" href="https://github.com/fernandoamz">
-          <i class="fa fa-github fa-2x " aria-hidden="true"></i>
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Work Experience</h2>
+
+      <!-- Job Card Example -->
+      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+        <div class="md:flex">
+          <div class="md:w-1/4 bg-red-400 text-white p-6">
+            <p>Nov 2023 - Present</p>
+            <h3 class="text-lg font-semibold mt-2">Encora México</h3>
+          </div>
+          <div class="md:w-3/4 p-6">
+            <h4 class="text-lg font-bold mb-2 text-textlight">Encora Inc - Senior React Native Developer, VoCap By AutoTune</h4>
+            <ul class="list-disc ml-5 text-textsecondary mb-2">
+              <li>Co-led VoCap with Staff Engineer app using React Native and Audio Native iOS modules.</li>
+              <li>Optimized audio performance with AudioEngine and JUCE.</li>
+              <li>Scaled the application to 20K+ installs and maintained a 3.7-star rating across diverse user segments.</li>
+              <li>Delivered the app to the stores, implementing new features and bringing the product to market.</li>
+              <li>Developed a custom gallery module to retrieve and manage videos and audio files directly from the device.</li>
+              <li>Enhanced video and audio capture flow in React Native by integrating native iOS modules.</li>
+              <li>Supervised new releases and semantic versioning.</li>
+              <li>Built the A/B testing infrastructure with feature flags in Firebase.</li>
+            </ul>
+            <a href="https://www.encora.com/" target="_blank" class="text-red-400 hover:underline">Encora Website</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Luxoft -->
+      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+        <div class="md:flex">
+          <div class="md:w-1/4 bg-red-400 text-white p-6">
+            <p>Dec 2021 - Nov 2023</p>
+            <h3 class="text-lg font-semibold mt-2">Luxoft México, DXC Company</h3>
+          </div>
+          <div class="md:w-3/4 p-6">
+            <h4 class="text-lg font-bold mb-2 text-textlight">React Native, GHX Platform</h4>
+            <ul class="list-disc ml-5 text-textsecondary mb-2">
+              <li>Cut crash rate from 10% to &lt;3% and enhanced API request performance.</li>
+              <li>Developed modular map components and standardized global state management using Redux.</li>
+              <li>Optimized map rendering performance during GeoJSON data retrieval with Redux Toolkit.</li>
+              <li>Centralized all API requests in the app using Redux Thunk.</li>
+              <li>Applied A/B testing for new features.</li>
+              <li>Contributed to micro frontends by adding native iOS/Android features.</li>
+            </ul>
+            <a href="https://www.luxoft.com/" target="_blank" class="text-red-400 hover:underline">Luxoft Website</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MagmaLabs -->
+      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+        <div class="md:flex">
+          <div class="md:w-1/4 bg-red-400 text-white p-6">
+            <p>Jan 2020 - Nov 2021</p>
+            <h3 class="text-lg font-semibold mt-2">MagmaLabs</h3>
+          </div>
+          <div class="md:w-3/4 p-6">
+            <h4 class="text-lg font-bold mb-2 text-textlight">Software Engineer – Beanstack & Quik for GoPro</h4>
+            <ul class="list-disc ml-5 text-textsecondary mb-2">
+              <li>Led gamification and subscriptions for the Beanstack app.</li>
+              <li>Architected scalable code and implemented CI/CD pipelines.</li>
+              <li>Built Quik for GoPro using Next.js, TypeScript, OAuth2, and Adyen.</li>
+              <li>Resolved on-demand service requests promptly, meeting all deadlines.</li>
+              <li>Solved Server-Side Rendering challenges and deployed to AWS and Datadog services.</li>
+            </ul>
+            <a href="https://www.magmalabs.io" target="_blank" class="text-red-400 hover:underline">MAGMALABS</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-16 bg-darkbg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Testimonials</h2>
+      <div class="flex flex-col items-center">
+        <!-- Testimonial Card -->
+        <div id="testimonial-card" class="bg-cardbg rounded-lg shadow-2xl p-8 w-full max-w-[800px]" data-aos="fade-up">          <div class="flex items-center mb-2">
+            <img id="testimonial-img" src="images/testimonial1.jpg" alt="Person 1" class="w-14 h-14 rounded-full mr-4 border-2 border-red-400">
+            <div>
+              <h4 id="testimonial-name" class="text-lg font-semibold text-textlight">Ana Martínez</h4>
+              <span id="testimonial-role" class="text-sm text-textsecondary">Product Manager, Encora</span>
+            </div>
+          </div>
+          <p id="testimonial-text" class="text-textsecondary italic">"Fernando is a fantastic developer! His attention to detail and ability to deliver on time made our project a success."</p>
+        </div>
+        <!-- Burger Menu Navigation -->
+        <div class="flex justify-center mt-6 space-x-4">
+          <button class="testimonial-burger w-4 h-4 rounded-full bg-red-400 opacity-80 transition-all" data-index="0"></button>
+          <button class="testimonial-burger w-4 h-4 rounded-full bg-cardbg border border-red-400 opacity-50 transition-all" data-index="1"></button>
+          <button class="testimonial-burger w-4 h-4 rounded-full bg-cardbg border border-red-400 opacity-50 transition-all" data-index="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="py-16 bg-darkbg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Education</h2>
+
+      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+        <div class="md:flex">
+          <div class="md:w-1/4 bg-red-400 text-white p-6">
+            <p>2013-2017</p>
+            <h3 class="text-lg font-semibold mt-2">IT Engineer</h3>
+          </div>
+          <div class="md:w-3/4 p-6">
+            <h4 class="text-lg font-bold mb-2 text-textlight">Information Technologies Engineer</h4>
+            <p class="text-textsecondary mb-2">Universidad Tecnológica de Manzanillo</p>
+            <p class="text-textsecondary mb-2">
+              The Technology Information Engineer is a professional with capabilities to develop mobile applications,
+              object oriented apps and responsive websites connected with a database.
+            </p>
+            <a href="https://utem.edu.mx/" target="_blank" class="text-red-400 hover:underline">UTEM WEBSITE</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+        <div class="md:flex">
+          <div class="md:w-1/4 bg-red-400 text-white p-6">
+            <p>2018</p>
+            <h3 class="text-lg font-semibold mt-2">Bright Coders</h3>
+          </div>
+          <div class="md:w-3/4 p-6">
+            <h4 class="text-lg font-bold mb-2 text-textlight">Bright Coders Mentoring Program</h4>
+            <p class="text-textsecondary mb-2">
+              An intensive on-site mentoring program designed to train talented software developers
+              who adopt the best programming practices, working with agile methodologies, having team work experience, developing projects
+              in real environments, and who are passionate and contribute to the community.
+            </p>
+            <a href="./docs/brigthcoders.pdf" target="_blank" class="text-red-400 hover:underline">CERTIFICATE</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-darkbg py-12 mb-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex justify-center space-x-4 mt-6 mb-5">
+        <a href="https://github.com/fernandoamz" target="_blank"
+          class="bg-cardbg text-textlight rounded-full hover:bg-gray-700 transition flex items-center justify-center w-12 h-12">
+          <i class="fab fa-github text-xl"></i>
         </a>
-        <a class="cc-facebook btn btn-link" href="https://www.linkedin.com/in/fernandoamz">
-          <i class="fa fa-linkedin fa-2x " aria-hidden="true"></i>
+        <a href="https://www.linkedin.com/in/fernandoamz" target="_blank"
+          class="bg-cardbg text-blue-400 rounded-full hover:bg-gray-700 transition flex items-center justify-center w-12 h-12">
+          <i class="fab fa-linkedin text-xl"></i>
         </a>
       </div>
-      <div class="h4 title text-center">Thanks so much!</div>
-      <div class="text-center text-muted">
-        <p>
-          if you are interested in this template you can download in
-          <a href="https://templateflip.com/templates/creative-cv/" target="_blank">Learn More</a>
-        </p>
-      </div>
-    </footer>
-    <script src="js/core/jquery.3.2.1.min.js"></script>
-    <script src="js/core/popper.min.js"></script>
-    <script src="js/core/bootstrap.min.js"></script>
-    <script src="js/now-ui-kit.js?v=1.1.0"></script>
-    <script src="js/aos.js"></script>
-    <script src="scripts/main.js"></script>
+      <h4 class="text-xl font-semibold mb-2 text-textlight">Thanks so much!</h4>
+      <p class="text-textsecondary mb-4">The amazing things start with a small idea.</p>
+      <p class="text-textsecondary text-sm">Let's do awesome things together</p>
+    </div>
+  </footer>
 
-  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    const dob = new Date(document.getElementById('dob')?.value || '1993-08-14');
+    const ageSpan = document.getElementById('age');
+    if (ageSpan) {
+      const diff = new Date() - dob;
+      const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+      ageSpan.innerText = age;
+    }
+
+    // testimonials 
+
+    const testimonials = [
+    {
+      img: "images/testimonial1.jpg",
+      name: "Ana Martínez",
+      role: "Product Manager, Encora",
+      text: "Fernando is a fantastic developer! His attention to detail and ability to deliver on time made our project a success."
+    },
+    {
+      img: "images/testimonial2.jpg",
+      name: "Luis Gómez",
+      role: "Tech Lead, Luxoft",
+      text: "Working with Fernando was a pleasure. He brings innovative solutions and is always willing to help the team."
+    },
+    {
+      img: "images/testimonial3.jpg",
+      name: "Sofía Ruiz",
+      role: "Mentor, Bright Coders",
+      text: "Fernando's mentorship and technical expertise helped our junior developers grow quickly and confidently."
+    }
+  ];
+
+  let current = 0;
+  const card = document.getElementById('testimonial-card');
+  const img = document.getElementById('testimonial-img');
+  const name = document.getElementById('testimonial-name');
+  const role = document.getElementById('testimonial-role');
+  const text = document.getElementById('testimonial-text');
+  const burgers = document.querySelectorAll('.testimonial-burger');
+
+  function showTestimonial(index) {
+    img.src = testimonials[index].img;
+    name.textContent = testimonials[index].name;
+    role.textContent = testimonials[index].role;
+    text.textContent = `"${testimonials[index].text}"`;
+    burgers.forEach((b, i) => {
+      b.classList.toggle('bg-red-400', i === index);
+      b.classList.toggle('bg-cardbg', i !== index);
+      b.classList.toggle('opacity-80', i === index);
+      b.classList.toggle('opacity-50', i !== index);
+    });
+    current = index;
+  }
+
+  burgers.forEach((b, i) => {
+    b.addEventListener('click', () => {
+      showTestimonial(i);
+    });
+  });
+
+  // Auto change every 5 seconds
+  setInterval(() => {
+    let next = (current + 1) % testimonials.length;
+    showTestimonial(next);
+  }, 3000);
+
+  // Initialize
+  showTestimonial(0);
+  </script>
+
+  <input type="hidden" value="1993-08-14" id="dob" name="dob" />
+
+</body>
 </html>
