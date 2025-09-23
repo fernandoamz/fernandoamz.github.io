@@ -7295,4 +7295,9 @@ a.credit {
 
 .backgroundImage {
   opacity: 100;
-} 
+}
+
+.cc-profile-image {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
