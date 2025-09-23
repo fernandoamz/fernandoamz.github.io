@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Welcome!</title>
+  <title>Welcome!</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="styles/main.css" />
@@ -37,18 +37,21 @@
   <!-- NAVBAR -->
   <header class="fixed top-0 w-full z-50 bg-darkbg shadow-md">
     <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
-      <a href="#" class="text-2xl font-bold text-textlight">¡Welcome!</a>
+      <a href="#" class="text-2xl font-bold text-textlight flex-1 text-left">¡Welcome!</a>
       <button id="navbar-toggle" class="text-textlight md:hidden focus:outline-none">
         <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
         <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
         <span class="block w-6 h-0.5 bg-textlight"></span>
       </button>
-      <ul id="navbar-menu" class="hidden md:flex space-x-6 font-medium">
-        <li><a href="#about" class="hover:text-primary transition">About</a></li>
-        <li><a href="#skill" class="hover:text-primary transition">Skills</a></li>
-        <li><a href="#experience" class="hover:text-primary transition">Experience</a></li>
-        <li><a href="#testimonials" class="hover:text-primary transition">Testimonials</a></li>
-        <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+      <ul id="navbar-menu"
+        class="hidden md:flex md:space-x-6 font-medium
+              fixed top-16 left-0 w-full bg-darkbg bg-opacity-95 z-50 flex-col space-y-4 py-6 px-4
+              md:static md:bg-transparent md:flex-row md:space-y-0 md:py-0 md:px-0 md:justify-end">
+        <li><a href="#about" class="menu-link block py-2 transition">About</a></li>
+        <li><a href="#skill" class="menu-link block py-2 transition">Skills</a></li>
+        <li><a href="#experience" class="menu-link block py-2 transition">Experience</a></li>
+        <li><a href="#testimonials" class="menu-link block py-2 transition">Testimonials</a></li>
+        <li><a href="#contact" class="menu-link block py-2 transition">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -120,10 +123,10 @@
         <div class="mb-4">
           <h3 class="text-lg font-bold text-textlight mb-2">Recent work includes:</h3>
           <ul class="list-disc ml-5 text-textsecondary space-y-1">
-            <li><span class="font-semibold text-red-400">VocApp by AutoTune®</span> – Pre Daw Music Production App with 20K+ downloads and growing</li>
+            <li><span class="font-semibold text-red-400">VocApp by AutoTune®</span> – Pre-Daw Music Production App with 20K+ downloads and growing</li>
             <li><span class="font-semibold text-red-400">Beanstack By Zoobean™</span> – Reading & education app with 500K+ downloads</li>
             <li><span class="font-semibold text-red-400">Redeem Coupons By GoPro</span> – Web App for a platform with millions of active users</li>
-            <li><span class="font-semibold text-red-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean Yield and Profit Potential with more than 1K+ downloads</li>
+            <li><span class="font-semibold text-red-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean Yield and Profit Potential with over 1K+ downloads</li>
             <li><span class="font-semibold text-red-400">Woodward Logistics</span> – Built internal apps to deliver a better user experience and improve internal processes</li>
           </ul>
         </div>
@@ -434,15 +437,20 @@
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Testimonials</h2>
       <div class="flex flex-col items-center ">
         <!-- Testimonial Card -->
-        <div id="testimonial-card" class="bg-cardbg bg-opacity-95 rounded-lg shadow-2xl p-8 w-full max-w-[800px] h-60" data-aos="fade-up">
-          <div class="flex items-center mb-2">
-            <img id="testimonial-img" src="images/testimonial1.jpg" alt="Person 1" class="w-14 h-14 rounded-full mr-4 border-2 border-red-400">
-            <div class="py-3">
-              <h4 id="testimonial-name" class="text-lg font-semibold text-textlight">Ana Martínez</h4>
-              <span id="testimonial-role" class="text-sm text-textsecondary">Product Manager, Encora</span>
+        <div id="testimonial-card"
+            class="bg-cardbg bg-opacity-95 rounded-lg shadow-2xl p-4 w-full max-w-md min-h-[16rem] flex flex-col justify-center items-center transition-opacity duration-500 mx-auto"
+            data-aos="fade-up">
+          <div class="flex items-center mb-2 w-full">
+            <img id="testimonial-img" src="images/testimonial1.jpg" alt="Person 1"
+                class="w-14 h-14 rounded-full mr-4 border-2 border-red-400 flex-shrink-0">
+            <div class="py-2">
+              <h4 id="testimonial-name" class="text-lg font-semibold text-textlight leading-tight">Ana Martínez</h4>
+              <span id="testimonial-role" class="text-sm text-textsecondary block leading-tight">Product Manager, Encora</span>
             </div>
           </div>
-          <p id="testimonial-text" class="text-textsecondary italic">"Fernando is a fantastic developer! His attention to detail and ability to deliver on time made our project a success."</p>
+          <p id="testimonial-text" class="text-textsecondary italic w-full text-center mt-2 break-words">
+            "Fernando is a fantastic developer! His attention to detail and ability to deliver on time made our project a success."
+          </p>
         </div>
         <!-- Burger Menu Navigation -->
         <div class="flex justify-center mt-6 space-x-4">
@@ -549,7 +557,7 @@
         </a>
       </div>
       <h4 class="text-xl font-semibold mb-2 text-textlight">Thanks so much!</h4>
-      <p class="text-textsecondary mb-4">The amazing things start with a small idea.</p>
+      <p class="text-textsecondary mb-4">Amazing things start with a small idea.</p>
       <p class="text-textsecondary text-sm">Let's do awesome things together</p>
     </div>
   </footer>
