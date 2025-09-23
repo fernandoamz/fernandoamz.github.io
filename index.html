@@ -53,35 +53,26 @@
     </nav>
   </header>
 
-  <script>
-    // Toggle mobile menu
-    const toggleButton = document.getElementById('navbar-toggle');
-    const menu = document.getElementById('navbar-menu');
-    toggleButton.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
-
   <!-- HERO SECTION -->
   <section class="relative h-screen bg-cover bg-center" style="background-image: url('images/cc-bg-1.jpg');">
-    <div class="absolute inset-0 pointer-events-none"></div>
-    <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
-      <div class="cc-profile-image w-40 h-40 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-red-400 mb-4">
+    <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-darkbg via-darkbg/75 to-transparent pointer-events-none"></div>    <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
+      <div class="cc-profile-image w-35 h-40 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-red-400 mb-4">
         <a href="#"><img src="images/fernando.jpg" alt="Fernando Amezcua" class="w-full h-full object-cover" alt="Image"></a>
       </div>
-      <h1 class="text-3xl md:text-5xl font-bold mb-2">Fernando Amezcua Alcantar</h1>
-      <p class="text-lg md:text-2xl mb-6 text-white">Senior React Native Developer</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">Fernando Amezcua Alcantar</h1>
+      <p class="text-lg md:text-2xl text-white">Senior React Native Developer</p>
+      <p class="text-white mb-3 mt-2">Colima, Mexico</p>
       <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank"
          class="bg-cardbg text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
          Download CV
       </a>
       <div class="flex space-x-4 mt-6">
         <a href="https://github.com/fernandoamz" target="_blank"
-          class="bg-cardbg text-textlight rounded-full hover:bg-gray-700 transition flex items-center justify-center w-12 h-12">
+          class="bg-cardbg text-textlight rounded-full hover:bg-gray-700 transition flex items-center justify-center w-14 h-14">
           <i class="fab fa-github text-xl"></i>
         </a>
         <a href="https://www.linkedin.com/in/fernandoamz" target="_blank"
-          class="bg-cardbg text-blue-400 rounded-full hover:bg-gray-700 transition flex items-center justify-center w-12 h-12">
+          class="bg-cardbg text-blue-400 rounded-full hover:bg-gray-700 transition flex items-center justify-center w-14 h-14">
           <i class="fab fa-linkedin text-xl"></i>
         </a>
       </div>
@@ -93,58 +84,61 @@
     <h2 class="text-2xl font-bold text-center mb-8 text-textlight">About Me!</h2>
     <div class="container mx-auto px-4">
       <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full lg:w-2/3 px-4 mb-6 lg:mb-0">
-            <h2 class="text-2xl font-bold mb-4 text-textlight">About</h2>
-            <p class="text-textsecondary text-justify mb-4">
-              Building a mobile app is an exciting journey. Throughout my career, I’ve had the opportunity to work with diverse teams, which has given me a deep understanding of what it takes to build successful applications.
-              <br><br>
-              I am a <span class="text-red-400 font-semibold">Senior Mobile Engineer</span> with over <span class="font-semibold">8 years of experience</span> developing high-quality cross-platform apps. Proficient in <span class="font-semibold">React Native, Node.js, Firebase, and native modules on iOS and Kotlin</span>, I also bring strong expertise in scalable backend systems, RESTful APIs, and serverless architectures.
-              <br><br>
-              I am passionate about creating performant, user-centric mobile experiences and enjoy teaching others about mobile technologies, including speaking at conferences.
-            </p>
-            <div class="bg-gray-800 rounded-lg p-4 mb-4">
-              <h3 class="text-lg font-bold text-textlight mb-2">Here’s how I work differently:</h3>
-              <ul class="list-none space-y-2 text-textsecondary">
-                <li>✓ I focus first on your <span class="font-semibold text-red-400">business goals</span>, not just the tech stack</li>
-                <li>✓ I design and build <span class="font-semibold text-red-400">scalable, user-friendly apps</span> people actually enjoy using</li>
-                <li>✓ I deliver <span class="font-semibold text-red-400">early prototypes</span> so you can validate the product before investing heavily</li>
-                <li>✓ I provide <span class="font-semibold text-red-400">ongoing support</span> so your app keeps evolving and stays competitive</li>
-              </ul>
-            </div>
-            <div class="mb-4">
-              <h3 class="text-lg font-bold text-textlight mb-2">Recent work includes:</h3>
-              <ul class="list-disc ml-5 text-textsecondary space-y-1">
-                <li><span class="font-semibold text-red-400">VocApp by AutoTune®</span> – Pre Daw Music Production App with 20K+ downloads and growing</li>
-                <li><span class="font-semibold text-red-400">Beanstack By Zoobean™</span> – Reading & education app with 500K+ downloads</li>
-                <li><span class="font-semibold text-red-400">Redeem Coupons By GoPro</span> – Web App for a platform with millions of active users</li>
-                <li><span class="font-semibold text-red-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean Yield and Profit Potential with more than 1K+ downloads</li>
-                <li><span class="font-semibold text-red-400">Woodward Logistics</span> – Built internal apps to deliver a better user experience and improve internal processes</li>
-              </ul>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-4 mb-4">
-              <h3 class="text-lg font-bold text-textlight mb-2">I typically work with businesses that want to:</h3>
-              <ul class="list-none space-y-2 text-textsecondary">
-                <li>→ Reach more customers through mobile</li>
-                <li>→ Turn an idea into a real, revenue-generating app</li>
-                <li>→ Improve operations with custom-built solutions</li>
-                <li>→ Stay competitive with modern, cloud-backed technology</li>
-              </ul>
-            </div>
-            <p class="text-textsecondary text-justify">
-              If you’re planning to launch a mobile app — or if you already have one and want to take it to the next level — <span class="font-semibold text-red-400">let’s talk about how to do it right.</span>
-            </p>
+        <!-- Profile and Basic Info
+        <div class="flex flex-col md:flex-row md:items-center md:space-x-8 mb-6">
+          <div class="flex-shrink-0 mb-4 md:mb-0 flex justify-center">
+            <img src="images/fernando.jpg" alt="Fernando Amezcua" class="w-24 h-24 rounded-full border-4 border-red-400 object-cover shadow-lg" />
           </div>
-          <div class="w-full lg:w-1/3 px-4">
-            <h2 class="text-2xl font-bold mb-4 text-textlight">Basic Information</h2>
-            <ul class="text-textsecondary space-y-2">
+          <div>
+            <h3 class="text-2xl font-bold text-textlight mb-2">Fernando Amezcua Alcantar</h3>
+            <ul class="text-textsecondary space-y-1 text-base">
               <li><strong>Age:</strong> <span id="age"></span></li>
-              <li><strong>Email:</strong> fernandoamz148@gmail.com</li>
-              <li><strong>Address:</strong> Colima, México</li>
-              <li><strong>Language:</strong> Spanish, English</li>
+              <li><strong>Email:</strong> <a href="mailto:fernandoamz148@gmail.com" class="text-red-400 hover:underline">fernandoamz148@gmail.com</a></li>
+              <li><strong>Location:</strong> Colima, México</li>
+              <li><strong>Languages:</strong> Spanish, English</li>
+              <li><strong>Role:</strong> Senior React Native Developer</li>
             </ul>
           </div>
+        </div  -->
+        <!-- About Text and Highlights -->
+        <p class="text-textsecondary text-justify mb-4">
+          Building a mobile app is an exciting journey. Throughout my career, I’ve had the opportunity to work with diverse teams, which has given me a deep understanding of what it takes to build successful applications.
+          <br><br>
+          I am a <span class="text-red-400 font-semibold">Senior Mobile Engineer</span> with over <span class="font-semibold">8 years of experience</span> developing high-quality cross-platform apps. Proficient in <span class="font-semibold">React Native, Node.js, Firebase, and native modules on iOS and Kotlin</span>, I also bring strong expertise in scalable backend systems, RESTful APIs, and serverless architectures.
+          <br><br>
+          I am passionate about creating performant, user-centric mobile experiences and enjoy teaching others about mobile technologies, including speaking at conferences.
+        </p>
+        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+          <h3 class="text-lg font-bold text-textlight mb-2">Here’s how I work differently:</h3>
+          <ul class="list-none space-y-2 text-textsecondary">
+            <li>✓ I focus first on your <span class="font-semibold text-red-400">business goals</span>, not just the tech stack</li>
+            <li>✓ I design and build <span class="font-semibold text-red-400">scalable, user-friendly apps</span> people actually enjoy using</li>
+            <li>✓ I deliver <span class="font-semibold text-red-400">early prototypes</span> so you can validate the product before investing heavily</li>
+            <li>✓ I provide <span class="font-semibold text-red-400">ongoing support</span> so your app keeps evolving and stays competitive</li>
+          </ul>
         </div>
+        <div class="mb-4">
+          <h3 class="text-lg font-bold text-textlight mb-2">Recent work includes:</h3>
+          <ul class="list-disc ml-5 text-textsecondary space-y-1">
+            <li><span class="font-semibold text-red-400">VocApp by AutoTune®</span> – Pre Daw Music Production App with 20K+ downloads and growing</li>
+            <li><span class="font-semibold text-red-400">Beanstack By Zoobean™</span> – Reading & education app with 500K+ downloads</li>
+            <li><span class="font-semibold text-red-400">Redeem Coupons By GoPro</span> – Web App for a platform with millions of active users</li>
+            <li><span class="font-semibold text-red-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean Yield and Profit Potential with more than 1K+ downloads</li>
+            <li><span class="font-semibold text-red-400">Woodward Logistics</span> – Built internal apps to deliver a better user experience and improve internal processes</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+          <h3 class="text-lg font-bold text-textlight mb-2">I typically work with businesses that want to:</h3>
+          <ul class="list-none space-y-2 text-textsecondary">
+            <li>→ Reach more customers through mobile</li>
+            <li>→ Turn an idea into a real, revenue-generating app</li>
+            <li>→ Improve operations with custom-built solutions</li>
+            <li>→ Stay competitive with modern, cloud-backed technology</li>
+          </ul>
+        </div>
+        <p class="text-textsecondary text-justify">
+          If you’re planning to launch a mobile app — or if you already have one and want to take it to the next level — <span class="font-semibold text-red-400">let’s talk about how to do it right.</span>
+        </p>
       </div>
     </div>
   </section>
@@ -154,42 +148,42 @@
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Professional Skills</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">React Native</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[90%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Expert</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">React</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">JavaScript / TypeScript</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Node.js</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Databases (Realm, SQL, Postgres)</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">CI/CD & Cloud (AWS / GCP)</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
@@ -197,42 +191,42 @@
           <span class="text-sm text-textsecondary">Proficient</span>
         </div>
         <!-- Additional Professional Skills -->
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Firebase & Serverless</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Native Modules (iOS & Kotlin)</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[60%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">RESTful APIs & Microservices</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[80%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Testing & Quality Assurance</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Agile & Scrum Methodologies</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
           </div>
           <span class="text-sm text-textsecondary">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
+        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
           <h3 class="text-lg font-semibold mb-2 text-textlight">Mentoring & Technical Leadership</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[80%]"></div>
@@ -249,7 +243,7 @@
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Work Experience</h2>
 
       <!-- Job Card Example -->
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg bg-opacity-95  rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>Nov 2023 - Present</p>
@@ -286,7 +280,7 @@
       </div>
 
       <!-- Luxoft -->
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>Dec 2021 - Nov 2023</p>
@@ -327,7 +321,7 @@
       </div>
 
       <!-- MagmaLabs -->
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>Jan 2020 - Nov 2021</p>
@@ -374,7 +368,7 @@
       </div>
 
       <!-- Logistica Woodward -->
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg  bg-opacity-95  rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>October 2017 - January 2019</p>
@@ -403,7 +397,7 @@
         </div>
       </div>
 
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>December 2016 - October 2017</p>
@@ -436,13 +430,14 @@
 
   <!-- TESTIMONIALS -->
   <section id="testimonials" class="py-16 bg-darkbg">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 ">
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Testimonials</h2>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center ">
         <!-- Testimonial Card -->
-        <div id="testimonial-card" class="bg-cardbg rounded-lg shadow-2xl p-8 w-full max-w-[800px]" data-aos="fade-up">          <div class="flex items-center mb-2">
+        <div id="testimonial-card" class="bg-cardbg bg-opacity-95 rounded-lg shadow-2xl p-8 w-full max-w-[800px] h-60" data-aos="fade-up">
+          <div class="flex items-center mb-2">
             <img id="testimonial-img" src="images/testimonial1.jpg" alt="Person 1" class="w-14 h-14 rounded-full mr-4 border-2 border-red-400">
-            <div>
+            <div class="py-3">
               <h4 id="testimonial-name" class="text-lg font-semibold text-textlight">Ana Martínez</h4>
               <span id="testimonial-role" class="text-sm text-textsecondary">Product Manager, Encora</span>
             </div>
@@ -453,7 +448,6 @@
         <div class="flex justify-center mt-6 space-x-4">
           <button class="testimonial-burger w-4 h-4 rounded-full bg-red-400 opacity-80 transition-all" data-index="0"></button>
           <button class="testimonial-burger w-4 h-4 rounded-full bg-cardbg border border-red-400 opacity-50 transition-all" data-index="1"></button>
-          <button class="testimonial-burger w-4 h-4 rounded-full bg-cardbg border border-red-400 opacity-50 transition-all" data-index="2"></button>
         </div>
       </div>
     </div>
@@ -464,7 +458,7 @@
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Education</h2>
 
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg  bg-opacity-95  rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>2013-2017</p>
@@ -477,12 +471,19 @@
               The Technology Information Engineer is a professional with capabilities to develop mobile applications,
               object oriented apps and responsive websites connected with a database.
             </p>
-            <a href="https://utem.edu.mx/" target="_blank" class="text-red-400 hover:underline">UTEM WEBSITE</a>
+
+             <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+              <!-- Company Website Link -->
+              <a href="https://utem.edu.mx/" target="_blank"
+                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+                Visit Website
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="bg-cardbg shadow-lg rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
             <p>2018</p>
@@ -495,11 +496,42 @@
               who adopt the best programming practices, working with agile methodologies, having team work experience, developing projects
               in real environments, and who are passionate and contribute to the community.
             </p>
-            <a href="./docs/brigthcoders.pdf" target="_blank" class="text-red-400 hover:underline">CERTIFICATE</a>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+              <!-- Company Website Link -->
+              <a href="./docs/brigthcoders.pdf" target="_blank"
+                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+                Certificate
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 bg-darkbg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Contact Me</h2>
+        <div class="max-w-lg mx-auto bg-cardbg bg-opacity-95 rounded-lg shadow-2xl p-8" data-aos="fade-up">
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label for="name" class="block text-textlight font-semibold mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-gray-800 text-textlight focus:outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+          <div>
+            <label for="email" class="block text-textlight font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-800 text-textlight focus:outline-none focus:ring-2 focus:ring-red-400" />
+          </div>
+          <div>
+            <label for="message" class="block text-textlight font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded bg-gray-800 text-textlight focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-red-400 text-white font-bold rounded hover:bg-red-500 transition">Send Message</button>
+          <p id="contact-status" class="mt-4 text-center text-textsecondary"></p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -539,22 +571,22 @@
     const testimonials = [
     {
       img: "images/testimonial1.jpg",
-      name: "Ana Martínez",
-      role: "Product Manager, Encora",
-      text: "Fernando is a fantastic developer! His attention to detail and ability to deliver on time made our project a success."
+      name: "Tom McCabe",
+      role: "Director of SW Engineering, Antares Audio Technologies",
+      text: "I am pleased to recommend Fernando Amezcua for opportunities as a mobile developer. During his contract engagement with our team, Fernando demonstrated a high level of professionalism, strong technical abilities, and a thoughtful, team-oriented approach to his work."
     },
     {
       img: "images/testimonial2.jpg",
-      name: "Luis Gómez",
-      role: "Tech Lead, Luxoft",
-      text: "Working with Fernando was a pleasure. He brings innovative solutions and is always willing to help the team."
+      name: "Nate Levin",
+      role: "Group Product Manager - Creator Tools",
+      text: "You’re a really great guy! It was a true honor collaborating on VoCap.                                                                                                                                                                                                         "
     },
-    {
+    /* {
       img: "images/testimonial3.jpg",
       name: "Sofía Ruiz",
       role: "Mentor, Bright Coders",
       text: "Fernando's mentorship and technical expertise helped our junior developers grow quickly and confidently."
-    }
+    } */
   ];
 
   let current = 0;
@@ -566,17 +598,21 @@
   const burgers = document.querySelectorAll('.testimonial-burger');
 
   function showTestimonial(index) {
-    img.src = testimonials[index].img;
-    name.textContent = testimonials[index].name;
-    role.textContent = testimonials[index].role;
-    text.textContent = `"${testimonials[index].text}"`;
-    burgers.forEach((b, i) => {
-      b.classList.toggle('bg-red-400', i === index);
-      b.classList.toggle('bg-cardbg', i !== index);
-      b.classList.toggle('opacity-80', i === index);
-      b.classList.toggle('opacity-50', i !== index);
-    });
-    current = index;
+    card.classList.add('fade');
+    setTimeout(() => {
+      img.src = testimonials[index].img;
+      name.textContent = testimonials[index].name;
+      role.textContent = testimonials[index].role;
+      text.textContent = `"${testimonials[index].text}"`;
+      burgers.forEach((b, i) => {
+        b.classList.toggle('bg-red-400', i === index);
+        b.classList.toggle('bg-cardbg', i !== index);
+        b.classList.toggle('opacity-80', i === index);
+        b.classList.toggle('opacity-50', i !== index);
+      });
+      current = index;
+      card.classList.remove('fade');
+    }, 350);
   }
 
   burgers.forEach((b, i) => {
@@ -589,7 +625,7 @@
   setInterval(() => {
     let next = (current + 1) % testimonials.length;
     showTestimonial(next);
-  }, 3000);
+  }, 5000);
 
   // Initialize
   showTestimonial(0);
@@ -663,6 +699,33 @@
   window.addEventListener('resize', () => {
     resizeCanvas();
     createStars();
+  });
+
+  // Contact form handler using Formspree (free, no backend required)
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const status = document.getElementById('contact-status');
+    status.textContent = "Sending...";
+    const formData = new FormData(this);
+    // Replace 'your@email.com' with your real email or Formspree endpoint
+    const response = await fetch('https://formspree.io/f/mjkabqgv', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      status.textContent = "Thank you! Your message has been sent.";
+      this.reset();
+    } else {
+      status.textContent = "Oops! Something went wrong. Please try again.";
+    }
+  });
+
+  // Toggle mobile menu
+  const toggleButton = document.getElementById('navbar-toggle');
+  const menu = document.getElementById('navbar-menu');
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
   });
   </script>
 
