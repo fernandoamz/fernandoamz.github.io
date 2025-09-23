@@ -7288,3 +7288,7 @@ a.credit {
 #testimonial-card.fade {
   opacity: 0;
 }
+
+.menu-link:hover {
+  color: #f87171 !important; /* Tailwind red-400 */
+}
