@@ -65,30 +65,38 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative h-screen bg-cover bg-center" style="background-image: url('images/cc-bg-1.jpg');">
-    <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-darkbg via-darkbg/75 to-transparent pointer-events-none"></div>    <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
-      <div class="cc-profile-image w-35 h-40 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-red-400 mb-4">
-        <a href="#"><img src="images/fernando.jpg" alt="Fernando Amezcua" class="w-full h-full object-cover" alt="Image"></a>
-      </div>
-      <h1 class="text-3xl md:text-4xl font-bold mb-2">Fernando Amezcua Alcantar</h1>
-      <p class="text-lg md:text-2xl text-white">Senior React Native Developer</p>
-      <p class="text-white mb-3 mt-2">Colima, Mexico</p>
-      <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank"
-         class="bg-cardbg text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
-         Download CV
-      </a>
-      <div class="flex space-x-4 mt-6">
-        <a href="https://github.com/fernandoamz" target="_blank"
-          class="bg-cardbg text-textlight rounded-full hover:bg-gray-700 transition flex items-center justify-center w-14 h-14">
-          <i class="fab fa-github text-xl"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/fernandoamz" target="_blank"
-          class="bg-cardbg text-blue-400 rounded-full hover:bg-gray-700 transition flex items-center justify-center w-14 h-14">
-          <i class="fab fa-linkedin text-xl"></i>
-        </a>
-      </div>
+  <section class="relative h-screen bg-cover bg-center">
+  <!-- Semi-transparent overlay only on the image -->
+  <div class="absolute inset-0 bg-black/30 opacity-80" style="background-image: url('images/cc-bg-1.jpg');"></div>
+
+  <!-- Gradient at bottom -->
+  <div class="absolute z-10 inset-x-0 bottom-0 h-36 bg-gradient-to-t from-darkbg via-darkbg/75 to-transparent pointer-events-none"></div>
+
+  <!-- Content (solid, not transparent) -->
+  <div class="relative z-20 container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
+    <div class="cc-profile-image w-35 h-40 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-red-400 mb-4">
+      <a href="#"><img src="images/fernando.jpg" alt="Fernando Amezcua" class="w-full h-full object-cover"></a>
     </div>
-  </section>
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Fernando Amezcua Alcantar</h1>
+    <p class="text-lg md:text-2xl text-white">Senior React Native Developer</p>
+    <p class="text-white mb-3 mt-2">Colima, Mexico</p>
+    <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank"
+       class="bg-cardbg text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-700 transition">
+       Download CV
+    </a>
+    <div class="flex space-x-4 mt-6">
+      <a href="https://github.com/fernandoamz" target="_blank"
+        class="bg-cardbg text-textlight rounded-full hover:bg-gray-700 transition flex items-center justify-center w-14 h-14">
+        <i class="fab fa-github text-xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/fernandoamz" target="_blank"
+        class="bg-cardbg text-blue-400 rounded-full hover:bg-gray-700 transition flex items-center justify-center w-14 h-14">
+        <i class="fab fa-linkedin text-xl"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <!-- ABOUT SECTION -->
   <section id="about" class="py-16">
