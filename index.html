@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Fernando Amezcua — Senior React Native Developer</title>
+  <title>Fernando Amezcua — Senior React Native Developer</title>
 
   <!-- SEO / Meta -->
-  <meta name="description" content="Fernando Amezcua - Senior React Native Developer with 8+ years of experience. Portfolio, skills, and projects." />
+  <meta name="description"
+    content="Fernando Amezcua - Senior React Native Developer with 8+ years of experience. Portfolio, skills, and projects." />
   <meta name="keywords" content="React Native, Mobile Developer, Software Engineer, Node.js, iOS, Kotlin, Portfolio" />
   <meta name="author" content="Fernando Amezcua" />
 
- 
+
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <link href="styles/main.css" />
   <link href="css/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <script>
     tailwind.config = {
       theme: {
@@ -39,6 +41,7 @@
   </script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body class="bg-darkbg font-montserrat text-textlight">
   <canvas id="galaxy-bg" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
 
@@ -51,8 +54,7 @@
         <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
         <span class="block w-6 h-0.5 bg-textlight"></span>
       </button>
-      <ul id="navbar-menu"
-        class="hidden md:flex md:space-x-6 font-medium
+      <ul id="navbar-menu" class="hidden md:flex md:space-x-6 font-medium
               fixed top-16 left-0 w-full bg-darkbg bg-opacity-95 z-50 flex-col space-y-4 py-6 px-4
               md:static md:bg-transparent md:flex-row md:space-y-0 md:py-0 md:px-0 md:justify-end">
         <li><a href="#about" class="menu-link block py-2 transition">About</a></li>
@@ -67,105 +69,107 @@
 
   <!-- HERO SECTION -->
   <section class="relative h-screen bg-cover bg-center">
-  <!-- Semi-transparent overlay only on the image -->
-  <div class="absolute inset-0 bg-black/30 opacity-80" style="background-image: url('images/cc-bg-1.jpg');"></div>
+    <!-- Semi-transparent overlay only on the image -->
+    <div class="absolute inset-0 bg-black/30 opacity-80" style="background-image: url('images/cc-bg-1.jpg');"></div>
 
-  <!-- Gradient at bottom -->
-  <div class="absolute z-10 inset-x-0 bottom-0 h-64 bg-gradient-to-t from-darkbg via-darkbg/75 to-transparent pointer-events-none"></div>
+    <!-- Gradient at bottom -->
+    <div
+      class="absolute z-10 inset-x-0 bottom-0 h-64 bg-gradient-to-t from-darkbg via-darkbg/75 to-transparent pointer-events-none">
+    </div>
 
-  <!-- Content (solid, not transparent) -->
-  <div class="relative z-20 container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
-    <div class="w-40 h-40 rounded-full overflow-hidden p-1 bg-gradient-to-br from-blue-400 to-blue-600 shadow-[0_8px_32px_0_rgba(44,120,255,0.25)] transition-transform duration-300 hover:scale-105 mb-4 animate-float">
-      <a href="#">
-        <img src="images/fernando.jpg" 
-            alt="Fernando Amezcua" 
+    <!-- Content (solid, not transparent) -->
+    <div
+      class="relative z-20 container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
+      <div
+        class="w-40 h-40 rounded-full overflow-hidden p-1 bg-gradient-to-br from-blue-400 to-blue-600 shadow-[0_8px_32px_0_rgba(44,120,255,0.25)] transition-transform duration-300 hover:scale-105 mb-4 animate-float">
+        <a href="#">
+          <img src="images/fernando.jpg" alt="Fernando Amezcua"
             class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg" />
+        </a>
+      </div>
+      <h1
+        class="text-5xl md:text-3xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text drop-shadow-lg">
+        Fernando Amezcua Alcantar
+      </h1>
+      <p class="text-xl md:text-1xl font-semibold text-textsecondary mb-1 tracking-wide">
+        Senior React Native Developer
+      </p>
+      <p class="text-lg text-textsecondary mb-6">
+        Colima, Mexico
+      </p>
+      <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank" class="font-semibold py-3 px-8 rounded-xl text-white text-lg
+              bg-gradient-to-br from-red-400 to-blue-600 shadow-[0_8px_32px_0_rgba(44,120,255,0.35)]
+              hover:from-red-500 hover:to-blue-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)]
+              transition-all duration-300">
+        know my work! - CV
       </a>
-    </div>
-    <h1 class="text-5xl md:text-3xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text drop-shadow-lg">
-      Fernando Amezcua Alcantar
-    </h1>
-    <p class="text-xl md:text-1xl font-semibold text-textsecondary mb-1 tracking-wide">
-      Senior React Native Developer
-    </p>
-    <p class="text-lg text-textsecondary mb-6">
-      Colima, Mexico
-    </p>
-    <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank"
-      class="font-semibold py-3 px-8 rounded-2xl text-white text-lg
-            bg-gradient-to-br from-red-400 to-blue-600 shadow-[0_8px_32px_0_rgba(44,120,255,0.35)]
-            hover:from-red-500 hover:to-blue-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)]
-            transition-all duration-300">
-      know my work! - CV
-    </a>
 
-    <div class="flex space-x-5 mt-6">
-      <a href="https://github.com/fernandoamz" target="_blank"
-        class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
-              hover:from-blue-500 hover:to-blue-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
-              transition-all duration-300 flex items-center justify-center w-14 h-14">
-        <i class="fab fa-github text-xl text-white"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/fernandoamz" target="_blank"
-        class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
-              hover:from-blue-500 hover:to-blue-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
-              transition-all duration-300 flex items-center justify-center w-14 h-14">
-        <i class="fab fa-linkedin text-xl text-white"></i>
-      </a>
+      <div class="flex space-x-5 mt-6">
+        <a href="https://github.com/fernandoamz" target="_blank" class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
+                hover:from-blue-500 hover:to-red-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
+                transition-all duration-300 flex items-center justify-center w-14 h-14">
+          <i class="fab fa-github text-xl text-white"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/fernandoamz" target="_blank" class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
+                hover:from-blue-500 hover:to-red-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
+                transition-all duration-300 flex items-center justify-center w-14 h-14">
+          <i class="fab fa-linkedin text-xl text-white"></i>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- ABOUT SECTION -->
   <section id="about" class="py-16">
     <h2 class="text-2xl font-bold text-center mb-8 text-textlight">About Me!</h2>
     <div class="container mx-auto px-4">
-      <div class="bg-cardbg bg-opacity-95 shadow-2xl shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-        <!-- Profile and Basic Info
-        <div class="flex flex-col md:flex-row md:items-center md:space-x-8 mb-6">
-          <div class="flex-shrink-0 mb-4 md:mb-0 flex justify-center">
-            <img src="images/fernando.jpg" alt="Fernando Amezcua" class="w-24 h-24 rounded-full border-4 border-red-400 object-cover shadow-lg" />
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold text-textlight mb-2">Fernando Amezcua Alcantar</h3>
-            <ul class="text-textsecondary space-y-1 text-base">
-              <li><strong>Age:</strong> <span id="age"></span></li>
-              <li><strong>Email:</strong> <a href="mailto:fernandoamz148@gmail.com" class="text-red-400 hover:underline">fernandoamz148@gmail.com</a></li>
-              <li><strong>Location:</strong> Colima, México</li>
-              <li><strong>Languages:</strong> Spanish, English</li>
-              <li><strong>Role:</strong> Senior React Native Developer</li>
-            </ul>
-          </div>
-        </div  -->
+      <div class="relative w-full max-w-4xl mx-auto p-6 rounded-2xl 
+                bg-gradient-to-br from-white/5 to-white/10 
+                backdrop-blur-md border border-white/10 
+                shadow-xl flex flex-col justify-center items-center" data-aos="fade-up">
         <!-- About Text and Highlights -->
         <p class="text-textsecondary text-justify mb-4">
-          Building a mobile app is an exciting journey. Throughout my career, I’ve had the opportunity to work with diverse teams, which has given me a deep understanding of what it takes to build successful applications.
+          Building a mobile app is an exciting journey. Throughout my career, I’ve had the opportunity to work with
+          diverse teams, which has given me a deep understanding of what it takes to build successful applications.
           <br><br>
-          I am a <span class="text-red-400 font-semibold">Senior Mobile Engineer</span> with over <span class="font-semibold">8 years of experience</span> developing high-quality cross-platform apps. Proficient in <span class="font-semibold">React Native, Node.js, Firebase, and native modules on iOS and Kotlin</span>, I also bring strong expertise in scalable backend systems, RESTful APIs, and serverless architectures.
+          I am a <span class="text-blue-400 font-semibold">Senior Mobile Engineer</span> with over <span
+            class="font-semibold">8 years of experience</span> developing high-quality cross-platform apps. Proficient
+          in <span class="font-semibold">React Native, Node.js, Firebase, and native modules on iOS and Kotlin</span>, I
+          also bring strong expertise in scalable backend systems, RESTful APIs, and serverless architectures.
           <br><br>
-          I am passionate about creating performant, user-centric mobile experiences and enjoy teaching others about mobile technologies, including speaking at conferences.
+          I am passionate about creating performant, user-centric mobile experiences and enjoy teaching others about
+          mobile technologies, including speaking at conferences.
         </p>
-        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+        <div class="bg-gray-800 rounded-lg p-4 mb-4 w-full">
           <h3 class="text-lg font-bold text-textlight mb-2">Here’s how I work differently:</h3>
           <ul class="list-none space-y-2 text-textsecondary">
-            <li>✓ I focus first on your <span class="font-semibold text-red-400">business goals</span>, not just the tech stack</li>
-            <li>✓ I design and build <span class="font-semibold text-red-400">scalable, user-friendly apps</span> people actually enjoy using</li>
-            <li>✓ I deliver <span class="font-semibold text-red-400">early prototypes</span> so you can validate the product before investing heavily</li>
-            <li>✓ I provide <span class="font-semibold text-red-400">ongoing support</span> so your app keeps evolving and stays competitive</li>
+            <li>✓ I focus first on your <span class="font-semibold text-blue-400">business goals</span>, not just the
+              tech stack</li>
+            <li>✓ I design and build <span class="font-semibold text-blue-400">scalable, user-friendly apps</span>
+              people actually enjoy using</li>
+            <li>✓ I deliver <span class="font-semibold text-blue-400">early prototypes</span> so you can validate the
+              product before investing heavily</li>
+            <li>✓ I provide <span class="font-semibold text-blue-400">ongoing support</span> so your app keeps evolving
+              and stays competitive</li>
           </ul>
         </div>
-        <div class="mb-4">
+        <div class="mb-4 w-full">
           <h3 class="text-lg font-bold text-textlight mb-2">Recent work includes:</h3>
           <ul class="list-disc ml-5 text-textsecondary space-y-1">
-            <li><span class="font-semibold text-red-400">VocApp by AutoTune®</span> – Pre-Daw Music Production App with 20K+ downloads and growing</li>
-            <li><span class="font-semibold text-red-400">Beanstack By Zoobean™</span> – Reading & education app with 500K+ downloads</li>
-            <li><span class="font-semibold text-red-400">Redeem Coupons By GoPro</span> – Web App for a platform with millions of active users</li>
-            <li><span class="font-semibold text-red-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean Yield and Profit Potential with over 1K+ downloads</li>
-            <li><span class="font-semibold text-red-400">Woodward Logistics</span> – Built internal apps to deliver a better user experience and improve internal processes</li>
+            <li><span class="font-semibold text-blue-400">VocApp by AutoTune®</span> – Pre-Daw Music Production App with
+              20K+ downloads and growing</li>
+            <li><span class="font-semibold text-blue-400">Beanstack By Zoobean™</span> – Reading & education app with
+              500K+ downloads</li>
+            <li><span class="font-semibold text-blue-400">Redeem Coupons By GoPro</span> – Web App for a platform with
+              millions of active users</li>
+            <li><span class="font-semibold text-blue-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean
+              Yield and Profit Potential with over 1K+ downloads</li>
+            <li><span class="font-semibold text-blue-400">Woodward Logistics</span> – Built internal apps to deliver a
+              better user experience and improve internal processes</li>
           </ul>
         </div>
-        <div class="bg-gray-800 rounded-lg p-4 mb-4">
+        <div class="bg-gray-800 rounded-lg p-4 mb-4 w-full">
           <h3 class="text-lg font-bold text-textlight mb-2">I typically work with businesses that want to:</h3>
           <ul class="list-none space-y-2 text-textsecondary">
             <li>→ Reach more customers through mobile</li>
@@ -175,7 +179,8 @@
           </ul>
         </div>
         <p class="text-textsecondary text-justify">
-          If you’re planning to launch a mobile app — or if you already have one and want to take it to the next level — <span class="font-semibold text-red-400">let’s talk about how to do it right.</span>
+          If you’re planning to launch a mobile app — or if you already have one and want to take it to the next level —
+          <a class="font-semibold text-blue-400" href="#contact">let’s talk about how to do it right.</a>
         </p>
       </div>
     </div>
@@ -185,130 +190,176 @@
   <section id="skill" class="py-16 bg-darkbg">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Professional Skills</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">React Native</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Skill Card Example -->
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">React Native</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[90%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Expert</span>
+          <span class="text-sm text-textsecondary mb-2">Expert</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">React</h3>
+
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">React</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Advanced</span>
+          <span class="text-sm text-textsecondary mb-2">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">JavaScript / TypeScript</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">JavaScript / TypeScript</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Advanced</span>
+          <span class="text-sm text-textsecondary mb-2">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Node.js</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Node.js</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Advanced</span>
+          <span class="text-sm text-textsecondary mb-2">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Databases (Realm, SQL, Postgres)</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Databases (Realm, SQL, Postgres)</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Proficient</span>
+          <span class="text-sm text-textsecondary mb-2">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">CI/CD & Cloud (AWS / GCP)</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">CI/CD & Cloud (AWS / GCP)</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Proficient</span>
+          <span class="text-sm text-textsecondary mb-2">Proficient</span>
         </div>
-        <!-- Additional Professional Skills -->
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Firebase & Serverless</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Firebase & Serverless</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Proficient</span>
+          <span class="text-sm text-textsecondary mb-2">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Native Modules (iOS & Kotlin)</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Native Modules (iOS & Kotlin)</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[60%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Proficient</span>
+          <span class="text-sm text-textsecondary mb-2">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">RESTful APIs & Microservices</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">RESTful APIs & Microservices</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[80%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Advanced</span>
+          <span class="text-sm text-textsecondary mb-2">Advanced</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Testing & Quality Assurance</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Testing & Quality Assurance</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Proficient</span>
+          <span class="text-sm text-textsecondary mb-2">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl bg-opacity-95  shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Agile & Scrum Methodologies</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Agile & Scrum Methodologies</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Proficient</span>
+          <span class="text-sm text-textsecondary mb-2">Proficient</span>
         </div>
-        <div class="bg-cardbg shadow-2xl  bg-opacity-95 shadow-black/40 rounded-lg p-8" data-aos="fade-up">
-          <h3 class="text-lg font-semibold mb-2 text-textlight">Mentoring & Technical Leadership</h3>
+        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
+                    bg-gradient-to-br from-white/5 to-white/10
+                    backdrop-blur-md border border-white/10
+                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
+          <h3 class="text-lg font-bold mb-2 text-textlight">Mentoring & Technical Leadership</h3>
           <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
             <div class="bg-red-400 h-4 rounded-full w-[80%]"></div>
           </div>
-          <span class="text-sm text-textsecondary">Advanced</span>
+          <span class="text-sm text-textsecondary mb-2">Advanced</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="py-16">
+  <section id="experience" class="py-16 bg-darkbg">
     <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Work Experience</h2>
+      <h2 class="text-3xl font-bold text-center mb-12 text-textlight tracking-tight">
+        Work Experience
+      </h2>
 
-      <!-- Job Card Example -->
-      <div class="bg-cardbg shadow-lg bg-opacity-95  rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <!-- Encora -->
+      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
+              backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
+          <!-- Side Panel -->
           <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>Nov 2023 - Present</p>
+            <p class="text-sm opacity-90">Nov 2023 - Present</p>
             <h3 class="text-lg font-semibold mt-2">Encora México</h3>
           </div>
+
+          <!-- Content -->
           <div class="md:w-3/4 p-6">
-            <h4 class="text-lg font-bold mb-2 text-textlight">Encora Inc. - Senior React Native Developer, VoCap By AutoTune</h4>
-            <ul class="list-disc ml-5 text-textsecondary mb-5">
+            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
+              Encora Inc. — Senior React Native Developer, VoCap By AutoTune
+            </h4>
+            <ul class="list-disc ml-5 text-textsecondary space-y-2">
               <li>Co-led VoCap with Staff Engineer app using React Native and Audio Native iOS modules.</li>
               <li>Optimized audio performance with AudioEngine and JUCE.</li>
-              <li>Scaled the application to 20K+ installs and maintained a 3.7-star rating across diverse user segments.</li>
+              <li>Scaled the application to 20K+ installs and maintained a 3.7-star rating across diverse user segments.
+              </li>
               <li>Delivered the app to the stores, implementing new features and bringing the product to market.</li>
-              <li>Developed a custom gallery module to retrieve and manage videos and audio files directly from the device.</li>
+              <li>Developed a custom gallery module to retrieve and manage videos and audio files directly from the
+                device.</li>
               <li>Enhanced video and audio capture flow in React Native by integrating native iOS modules.</li>
               <li>Supervised new releases and semantic versioning.</li>
               <li>Built the A/B testing infrastructure with feature flags in Firebase.</li>
             </ul>
+
+            <!-- Links -->
             <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
               <a href="https://www.encora.com/" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
                 Visit Website
               </a>
-
-              <!-- App Store Link -->
               <a href="https://apps.apple.com/us/app/vocap-by-autotune/id6740216111" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300">
+                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
                 <i class="fab fa-apple text-2xl mr-2"></i>
                 <span>View on App Store</span>
               </a>
@@ -318,15 +369,18 @@
       </div>
 
       <!-- Luxoft -->
-      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
+              backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>Dec 2021 - Nov 2023</p>
+            <p class="text-sm opacity-90">Dec 2021 - Nov 2023</p>
             <h3 class="text-lg font-semibold mt-2">Luxoft México, DXC Company</h3>
           </div>
           <div class="md:w-3/4 p-6">
-            <h4 class="text-lg font-bold mb-2 text-textlight">React Native, GHX Platform</h4>
-            <ul class="list-disc ml-5 text-textsecondary mb-2">
+            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
+              React Native — GHX Platform
+            </h4>
+            <ul class="list-disc ml-5 text-textsecondary space-y-2">
               <li>Cut crash rate from 10% to &lt;3% and enhanced API request performance.</li>
               <li>Developed modular map components and standardized global state management using Redux.</li>
               <li>Optimized map rendering performance during GeoJSON data retrieval with Redux Toolkit.</li>
@@ -334,22 +388,19 @@
               <li>Applied A/B testing for new features.</li>
               <li>Contributed to micro frontends by adding native iOS/Android features.</li>
             </ul>
+
             <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
               <a href="https://www.luxoft.com/" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
                 Visit Website
               </a>
-
-              <!-- App Store Link -->
               <a href="https://apps.apple.com/mx/app/ghx-seed/id1582859873" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300">
+                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
                 <i class="fab fa-apple text-2xl mr-2"></i>
                 <span>View on App Store</span>
               </a>
-
               <a href="https://play.google.com/store/apps/details?id=com.mobilereactnativeghx" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300">
+                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
                 <i class="fab fa-google-play text-2xl mr-2"></i>
                 <span>View on Play Store</span>
               </a>
@@ -359,15 +410,18 @@
       </div>
 
       <!-- MagmaLabs -->
-      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
+      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
+              backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
         <div class="md:flex">
           <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>Jan 2020 - Nov 2021</p>
+            <p class="text-sm opacity-90">Jan 2020 - Nov 2021</p>
             <h3 class="text-lg font-semibold mt-2">MagmaLabs</h3>
           </div>
           <div class="md:w-3/4 p-6">
-            <h4 class="text-lg font-bold mb-2 text-textlight">Software Engineer – Beanstack & Quik for GoPro</h4>
-            <ul class="list-disc ml-5 text-textsecondary mb-2">
+            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
+              Software Engineer — Beanstack & Quik for GoPro
+            </h4>
+            <ul class="list-disc ml-5 text-textsecondary space-y-2">
               <li>Led gamification and subscriptions for the Beanstack app.</li>
               <li>Architected scalable code and implemented CI/CD pipelines.</li>
               <li>Built Quik for GoPro using Next.js, TypeScript, OAuth2, and Adyen.</li>
@@ -376,27 +430,22 @@
             </ul>
 
             <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
               <a href="https://www.magmalabs.io" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
                 Visit Website
               </a>
-
               <a href="https://gopro.com/redeemquik" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300">
+                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
                 <i class="fa fa-camera text-2xl mr-2"></i>
                 <span>GoPro Website</span>
               </a>
-
-              <!-- App Store Link -->
               <a href="https://apps.apple.com/es/app/beanstack-tracker/id1360324277" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300">
+                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
                 <i class="fab fa-apple text-2xl mr-2"></i>
                 <span>View on App Store</span>
               </a>
-
               <a href="https://play.google.com/store/apps/details?id=com.beanstack&hl=es_419" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-lg hover:bg-gray-800 transition-all duration-300">
+                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
                 <i class="fab fa-google-play text-2xl mr-2"></i>
                 <span>View on Play Store</span>
               </a>
@@ -404,179 +453,133 @@
           </div>
         </div>
       </div>
-
-      <!-- Logistica Woodward -->
-      <div class="bg-cardbg shadow-lg  bg-opacity-95  rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>October 2017 - January 2019</p>
-            <h3 class="text-lg font-semibold mt-2">
-              Logística Woodward 
-            </h3>
-          </div>
-          <div class="md:w-3/4 p-6">
-            <div class="text-lg font-bold mb-2 text-textlight">Head of Mobile Development / Fullstack Developer</div>
-            <ul class="list-disc ml-5 text-textsecondary mb-2">
-              <li>Led the Mobile Development department, managing the full live mobile cycle.</li>
-              <li>Built a multimedia documentation system using React, Next.js, MSSQL, MySQL, Redux, and Redux Thunk.</li>
-              <li>Developed two React Native apps for logistics teams, published on the Play Store.</li>
-              <li>Designed and implemented fullstack solutions, integrating front-end and back-end with scalable APIs and databases.</li>
-              <li>Collaborated with non-technical stakeholders to gather requirements and implement technical solutions.</li>
-              <li>Maintained production, staging, and test environments, managing Linux infrastructure on VPS servers.</li>
-            </ul>
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
-              <a href="http://woodward.mx/" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
-                Visit Website
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>December 2016 - October 2017</p>
-            <h3 class="text-lg font-semibold mt-2">
-              Desarrollo 80
-            </h3>
-          </div>
-          <div class="md:w-3/4 p-6">
-            <div class="text-lg font-bold mb-2 text-textlight">FullStack Developer</div>
-            <ul class="list-disc ml-5 text-textsecondary mb-2">
-              <li>Developed UIs using PHP, JavaScript, Dojo, and REST APIs.</li>
-              <li>Built reusable components and supported a modular design approach.</li>
-              <li>Collaborated with non-technical stakeholders to gather requirements and communicate technical limitations and opportunities effectively.</li>
-              <li>Contributed to architecture, testing, and requirements discussions.</li>
-            </ul>
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
-              <a href="http://www.d80.mx/" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
-                Visit Website
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
+
 
 
   <!-- TESTIMONIALS -->
   <section id="testimonials" class="py-16 bg-darkbg">
-    <div class="container mx-auto px-4 ">
-      <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Testimonials</h2>
-      <div class="flex flex-col items-center ">
-        <!-- Testimonial Card -->
-        <div id="testimonial-card"
-            class="bg-cardbg bg-opacity-95 rounded-lg shadow-2xl p-4 w-full max-w-md min-h-[16rem] flex flex-col justify-center items-center transition-opacity duration-500 mx-auto"
-            data-aos="fade-up">
-          <div class="flex items-center mb-2 w-full">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-textlight tracking-tight">
+        Testimonials
+      </h2>
+      <div class="flex flex-col items-center">
+        <!-- Glassmorphism Testimonial Card -->
+        <div id="testimonial-card" class="relative w-full max-w-md p-6 rounded-2xl
+           bg-gradient-to-br from-white/5 to-white/10
+           backdrop-blur-md border border-white/10
+           shadow-xl flex flex-col transition-all duration-500
+           min-h-[300px]">
+          <!-- Profile -->
+          <div class="flex items-center mb-6 w-full min-h-[72px]">
             <img id="testimonial-img" src="images/testimonial1.jpg" alt="Person 1"
-                class="w-14 h-14 rounded-full mr-4 border-2 border-red-400 flex-shrink-0">
-            <div class="py-2">
-              <h4 id="testimonial-name" class="text-lg font-semibold text-textlight leading-tight">Ana Martínez</h4>
-              <span id="testimonial-role" class="text-sm text-textsecondary block leading-tight">Product Manager, Encora</span>
+              class="w-16 h-16 rounded-full border-2 border-red-400 shadow-md object-cover mr-4" />
+            <div class="flex flex-col">
+              <h4 id="testimonial-name" class="text-lg font-semibold text-textlight">
+                Ana Martínez
+              </h4>
+              <span id="testimonial-role" class="text-sm text-textsecondary">
+                Product Manager, Encora
+              </span>
             </div>
           </div>
-          <p id="testimonial-text" class="text-textsecondary italic w-full text-center mt-2 break-words">
-            "Fernando is a fantastic developer! His attention to detail and ability to deliver on time made our project a success."
+          <!-- Quote -->
+          <p id="testimonial-text" class="text-textsecondary italic text-center leading-relaxed flex-1">
+            "Fernando is a fantastic developer! His attention to detail and ability
+            to deliver on time made our project a success."
           </p>
         </div>
-        <!-- Burger Menu Navigation -->
-        <div class="flex justify-center mt-6 space-x-4">
-          <button class="testimonial-burger w-4 h-4 rounded-full bg-red-400 opacity-80 transition-all" data-index="0"></button>
-          <button class="testimonial-burger w-4 h-4 rounded-full bg-cardbg border border-red-400 opacity-50 transition-all" data-index="1"></button>
+        <!-- Navigation -->
+        <div class="flex justify-center mt-6 space-x-3">
+          <button class="testimonial-burger w-3.5 h-3.5 rounded-full bg-red-400 
+               shadow-sm opacity-80" data-index="0"></button>
+          <button class="testimonial-burger w-3.5 h-3.5 rounded-full bg-white/10 
+               border border-red-400 opacity-50" data-index="1"></button>
         </div>
       </div>
     </div>
   </section>
+
+
 
   <!-- EDUCATION SECTION -->
   <section id="education" class="py-16 bg-darkbg">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Education</h2>
 
-      <div class="bg-cardbg shadow-lg  bg-opacity-95  rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>2013-2017</p>
-            <h3 class="text-lg font-semibold mt-2">IT Engineer</h3>
-          </div>
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-lg font-bold mb-2 text-textlight">Information Technologies Engineer</h4>
-            <p class="text-textsecondary mb-2">Universidad Tecnológica de Manzanillo</p>
-            <p class="text-textsecondary mb-2">
-              The Technology Information Engineer is a professional with capabilities to develop mobile applications,
-              object oriented apps and responsive websites connected with a database.
-            </p>
-
-             <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
-              <a href="https://utem.edu.mx/" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
-                Visit Website
-              </a>
-            </div>
-          </div>
-        </div>
+      <!-- Education Card 1 -->
+      <div class="relative w-full max-w-3xl mx-auto mb-6 p-6 rounded-2xl 
+                bg-gradient-to-br from-white/5 to-white/10 
+                backdrop-blur-md border border-white/10 
+                shadow-xl flex flex-col transition-all duration-500" data-aos="fade-up">
+        <h4 class="text-lg font-semibold text-textlight mb-1">Information Technologies Engineer</h4>
+        <span class="text-sm text-textsecondary block mb-3">2013 - 2017 · Universidad Tecnológica de Manzanillo</span>
+        <p class="text-textsecondary mb-4">
+          The Technology Information Engineer is a professional with capabilities to develop mobile applications,
+          object-oriented apps, and responsive websites connected with a database.
+        </p>
+        <a href="https://utem.edu.mx/" target="_blank"
+          class="self-start px-6 py-2 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+          Visit Website
+        </a>
       </div>
 
-      <div class="bg-cardbg shadow-lg  bg-opacity-95 rounded-lg mb-6 overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p>2018</p>
-            <h3 class="text-lg font-semibold mt-2">Bright Coders</h3>
-          </div>
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-lg font-bold mb-2 text-textlight">Bright Coders Mentoring Program</h4>
-            <p class="text-textsecondary mb-2">
-              An intensive on-site mentoring program designed to train talented software developers
-              who adopt the best programming practices, working with agile methodologies, having team work experience, developing projects
-              in real environments, and who are passionate and contribute to the community.
-            </p>
-
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-              <!-- Company Website Link -->
-              <a href="./docs/brigthcoders.pdf" target="_blank"
-                class="px-6 py-3 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
-                Certificate
-              </a>
-            </div>
-          </div>
-        </div>
+      <!-- Education Card 2 -->
+      <div class="relative w-full max-w-3xl mx-auto mb-6 p-6 rounded-2xl 
+                bg-gradient-to-br from-white/5 to-white/10 
+                backdrop-blur-md border border-white/10 
+                shadow-xl flex flex-col transition-all duration-500" data-aos="fade-up">
+        <h4 class="text-lg font-semibold text-textlight mb-1">Bright Coders Mentoring Program</h4>
+        <span class="text-sm text-textsecondary block mb-3">2018 · Bright Coders</span>
+        <p class="text-textsecondary mb-4">
+          An intensive on-site mentoring program designed to train talented software developers
+          who adopt best practices, work with agile methodologies, collaborate in real environments,
+          and contribute to the community.
+        </p>
+        <a href="./docs/brigthcoders.pdf" target="_blank"
+          class="self-start px-6 py-2 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
+          Certificate
+        </a>
       </div>
-
     </div>
   </section>
 
   <section id="contact" class="py-16 bg-darkbg">
     <div class="container mx-auto px-4">
       <h2 class="text-2xl font-bold text-center mb-8 text-textlight">Contact Me</h2>
-        <div class="max-w-lg mx-auto bg-cardbg bg-opacity-95 rounded-lg shadow-2xl p-8" data-aos="fade-up">
+
+      <!-- Contact Card -->
+      <div class="relative w-full max-w-lg mx-auto p-8 rounded-2xl 
+                bg-gradient-to-br from-white/5 to-white/10 
+                backdrop-blur-md border border-white/10 
+                shadow-xl transition-all duration-500" data-aos="fade-up">
         <form id="contact-form" class="space-y-6">
           <div>
             <label for="name" class="block text-textlight font-semibold mb-2">Name</label>
-            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-gray-800 text-textlight focus:outline-none focus:ring-2 focus:ring-red-400" />
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-2 rounded-lg bg-gray-800/70 text-textlight border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition" />
           </div>
           <div>
             <label for="email" class="block text-textlight font-semibold mb-2">Email</label>
-            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-800 text-textlight focus:outline-none focus:ring-2 focus:ring-red-400" />
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2 rounded-lg bg-gray-800/70 text-textlight border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition" />
           </div>
           <div>
             <label for="message" class="block text-textlight font-semibold mb-2">Message</label>
-            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 rounded bg-gray-800 text-textlight focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full px-4 py-2 rounded-lg bg-gray-800/70 text-textlight border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition"></textarea>
           </div>
-          <button type="submit" class="w-full py-3 bg-red-400 text-white font-bold rounded hover:bg-red-500 transition">Send Message</button>
+          <button type="submit"
+            class="w-full py-3 bg-red-400 text-white font-bold rounded-lg hover:bg-red-500 transition-all duration-300">
+            Send Message
+          </button>
           <p id="contact-status" class="mt-4 text-center text-textsecondary"></p>
         </form>
       </div>
     </div>
   </section>
+
 
   <!-- FOOTER -->
   <footer class="bg-darkbg py-12 mb-8">
@@ -612,167 +615,168 @@
     // testimonials 
 
     const testimonials = [
-    {
-      img: "images/testimonial1.jpg",
-      name: "Tom McCabe",
-      role: "Director of SW Engineering, Antares Audio Technologies",
-      text: "I am pleased to recommend Fernando Amezcua for opportunities as a mobile developer. During his contract engagement with our team, Fernando demonstrated a high level of professionalism, strong technical abilities, and a thoughtful, team-oriented approach to his work."
-    },
-    {
-      img: "images/testimonial2.jpg",
-      name: "Nate Levin",
-      role: "Group Product Manager - Creator Tools",
-      text: "You’re a really great guy! It was a true honor collaborating on VoCap.                                                                                                                                                                                                         "
-    },
-    /* {
-      img: "images/testimonial3.jpg",
-      name: "Sofía Ruiz",
-      role: "Mentor, Bright Coders",
-      text: "Fernando's mentorship and technical expertise helped our junior developers grow quickly and confidently."
-    } */
-  ];
+      {
+        img: "images/testimonial1.jpg",
+        name: "Tom McCabe",
+        role: "Director of SW Engineering, Antares Audio Technologies",
+        text: "I am pleased to recommend Fernando Amezcua for opportunities as a mobile developer. During his contract engagement with our team, Fernando demonstrated a high level of professionalism, strong technical abilities, and a thoughtful, team-oriented approach to his work."
+      },
+      {
+        img: "images/testimonial2.jpg",
+        name: "Nate Levin",
+        role: "Group Product Manager - Creator Tools",
+        text: "You’re a really great guy! It was a true honor collaborating on VoCap.                                                                                                                                                                                                         "
+      },
+      /* {
+        img: "images/testimonial3.jpg",
+        name: "Sofía Ruiz",
+        role: "Mentor, Bright Coders",
+        text: "Fernando's mentorship and technical expertise helped our junior developers grow quickly and confidently."
+      } */
+    ];
 
-  let current = 0;
-  const card = document.getElementById('testimonial-card');
-  const img = document.getElementById('testimonial-img');
-  const name = document.getElementById('testimonial-name');
-  const role = document.getElementById('testimonial-role');
-  const text = document.getElementById('testimonial-text');
-  const burgers = document.querySelectorAll('.testimonial-burger');
+    let current = 0;
+    const card = document.getElementById('testimonial-card');
+    const img = document.getElementById('testimonial-img');
+    const name = document.getElementById('testimonial-name');
+    const role = document.getElementById('testimonial-role');
+    const text = document.getElementById('testimonial-text');
+    const burgers = document.querySelectorAll('.testimonial-burger');
 
-  function showTestimonial(index) {
-    card.classList.add('fade');
-    setTimeout(() => {
-      img.src = testimonials[index].img;
-      name.textContent = testimonials[index].name;
-      role.textContent = testimonials[index].role;
-      text.textContent = `"${testimonials[index].text}"`;
-      burgers.forEach((b, i) => {
-        b.classList.toggle('bg-red-400', i === index);
-        b.classList.toggle('bg-cardbg', i !== index);
-        b.classList.toggle('opacity-80', i === index);
-        b.classList.toggle('opacity-50', i !== index);
+    function showTestimonial(index) {
+      card.classList.add('fade');
+      setTimeout(() => {
+        img.src = testimonials[index].img;
+        name.textContent = testimonials[index].name;
+        role.textContent = testimonials[index].role;
+        text.textContent = `"${testimonials[index].text}"`;
+        burgers.forEach((b, i) => {
+          b.classList.toggle('bg-red-400', i === index);
+          b.classList.toggle('bg-cardbg', i !== index);
+          b.classList.toggle('opacity-80', i === index);
+          b.classList.toggle('opacity-50', i !== index);
+        });
+        current = index;
+        card.classList.remove('fade');
+      }, 350);
+    }
+
+    burgers.forEach((b, i) => {
+      b.addEventListener('click', () => {
+        showTestimonial(i);
       });
-      current = index;
-      card.classList.remove('fade');
-    }, 350);
-  }
-
-  burgers.forEach((b, i) => {
-    b.addEventListener('click', () => {
-      showTestimonial(i);
     });
-  });
 
-  // Auto change every 5 seconds
-  setInterval(() => {
-    let next = (current + 1) % testimonials.length;
-    showTestimonial(next);
-  }, 5000);
+    // Auto change every 5 seconds
+    setInterval(() => {
+      let next = (current + 1) % testimonials.length;
+      showTestimonial(next);
+    }, 5000);
 
-  // Initialize
-  showTestimonial(0);
+    // Initialize
+    showTestimonial(0);
 
     // Galaxy background animation
-  const canvas = document.getElementById('galaxy-bg');
-  const ctx = canvas.getContext('2d');
-  let stars = [];
-  const STAR_COUNT = 120;
-  const STAR_COLOR = "#fff";
-  const STAR_SIZE = 1.5;
+    const canvas = document.getElementById('galaxy-bg');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    const STAR_COUNT = 120;
+    const STAR_COLOR = "#fff";
+    const STAR_SIZE = 1.5;
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-
-  function createStars() {
-    stars = [];
-    for (let i = 0; i < STAR_COUNT; i++) {
-      stars.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        z: Math.random() * canvas.width,
-        o: 0.5 + Math.random() * 0.5,
-        r: STAR_SIZE + Math.random() * 1.5,
-        speed: 0.5 + Math.random() * 0.50
-      });
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
-  }
-  createStars();
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-  function drawStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (let star of stars) {
-      ctx.globalAlpha = star.o;
-      ctx.beginPath();
-      ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
-      ctx.fillStyle = STAR_COLOR;
-      ctx.shadowColor = "#fff";
-      ctx.shadowBlur = 8;
-      ctx.fill();
-      ctx.closePath();
-    }
-    ctx.globalAlpha = 1;
-  }
-
-  function animateStars() {
-    for (let star of stars) {
-      star.y += star.speed + window.scrollY * 0.000003;
-      if (star.y > canvas.height) {
-        star.x = Math.random() * canvas.width;
-        star.y = 0;
-        star.r = STAR_SIZE + Math.random() * 1.5;
-        star.o = 0.5 + Math.random() * 0.5;
-        star.speed = 0.2 + Math.random() * 0.5;
+    function createStars() {
+      stars = [];
+      for (let i = 0; i < STAR_COUNT; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          z: Math.random() * canvas.width,
+          o: 0.5 + Math.random() * 0.5,
+          r: STAR_SIZE + Math.random() * 1.5,
+          speed: 0.5 + Math.random() * 0.50
+        });
       }
     }
-  }
-
-  function loop() {
-    animateStars();
-    drawStars();
-    requestAnimationFrame(loop);
-  }
-  loop();
-
-  // Recreate stars on resize for responsiveness
-  window.addEventListener('resize', () => {
-    resizeCanvas();
     createStars();
-  });
 
-  // Contact form handler using Formspree (free, no backend required)
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const status = document.getElementById('contact-status');
-    status.textContent = "Sending...";
-    const formData = new FormData(this);
-    // Replace 'your@email.com' with your real email or Formspree endpoint
-    const response = await fetch('https://formspree.io/f/mjkabqgv', {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    });
-    if (response.ok) {
-      status.textContent = "Thank you! Your message has been sent.";
-      this.reset();
-    } else {
-      status.textContent = "Oops! Something went wrong. Please try again.";
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let star of stars) {
+        ctx.globalAlpha = star.o;
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
+        ctx.fillStyle = STAR_COLOR;
+        ctx.shadowColor = "#fff";
+        ctx.shadowBlur = 8;
+        ctx.fill();
+        ctx.closePath();
+      }
+      ctx.globalAlpha = 1;
     }
-  });
 
-  // Toggle mobile menu
-  const toggleButton = document.getElementById('navbar-toggle');
-  const menu = document.getElementById('navbar-menu');
-  toggleButton.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
+    function animateStars() {
+      for (let star of stars) {
+        star.y += star.speed + window.scrollY * 0.000003;
+        if (star.y > canvas.height) {
+          star.x = Math.random() * canvas.width;
+          star.y = 0;
+          star.r = STAR_SIZE + Math.random() * 1.5;
+          star.o = 0.5 + Math.random() * 0.5;
+          star.speed = 0.2 + Math.random() * 0.5;
+        }
+      }
+    }
+
+    function loop() {
+      animateStars();
+      drawStars();
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    // Recreate stars on resize for responsiveness
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createStars();
+    });
+
+    // Contact form handler using Formspree (free, no backend required)
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const status = document.getElementById('contact-status');
+      status.textContent = "Sending...";
+      const formData = new FormData(this);
+      // Replace 'your@email.com' with your real email or Formspree endpoint
+      const response = await fetch('https://formspree.io/f/mjkabqgv', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = "Thank you! Your message has been sent.";
+        this.reset();
+      } else {
+        status.textContent = "Oops! Something went wrong. Please try again.";
+      }
+    });
+
+    // Toggle mobile menu
+    const toggleButton = document.getElementById('navbar-toggle');
+    const menu = document.getElementById('navbar-menu');
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
   </script>
 
   <input type="hidden" value="1993-08-14" id="dob" name="dob" />
 
 </body>
+
 </html>
