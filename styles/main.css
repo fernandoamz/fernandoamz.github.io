@@ -7135,6 +7135,7 @@ Created using IcoMoon - icomoon.io
           animation: none;
 }
 
+
 /* Profile Page Social button Style */
 .button-container .btn-default {
   margin-right: 8px;
@@ -7300,4 +7301,23 @@ a.credit {
 .cc-profile-image {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+@keyframes scrollBrands {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scrollBrands 40s linear infinite;
+  min-width: 2000px;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
