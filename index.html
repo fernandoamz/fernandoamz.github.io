@@ -454,40 +454,24 @@
     <div class="container mx-auto px-4">
       <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">Testimonials</p>
       <h2 class="font-display font-bold text-[26px] text-paper mb-8">What colleagues say</h2>
-      <div class="flex flex-col gap-5">
-        <article class="bg-paper border border-line rounded-lg p-8">
+      <div class="max-w-3xl">
+        <div id="testimonial-card" class="bg-paper border border-line rounded-lg p-8" aria-live="polite">
           <p class="font-display font-light text-[32px] leading-none text-[#c9c5be]" aria-hidden="true">"</p>
-          <p class="text-[14px] leading-[1.8] text-[#374151] mt-5">I am pleased to recommend Fernando Amezcua for opportunities as a mobile developer. During his contract engagement with our team, Fernando demonstrated a high level of professionalism, strong technical abilities, and a thoughtful, team-oriented approach to his work.</p>
+          <p id="testimonial-text" class="text-[14px] leading-[1.8] text-[#374151] mt-5">I am pleased to recommend Fernando Amezcua for opportunities as a mobile developer. During his contract engagement with our team, Fernando demonstrated a high level of professionalism, strong technical abilities, and a thoughtful, team-oriented approach to his work.</p>
           <div class="flex items-center mt-5">
-            <img src="images/testimonial1.jpg" alt="" class="w-10 h-10 rounded-full object-cover mr-3" />
+            <img id="testimonial-img" src="images/testimonial1.jpg" alt=""
+              class="w-10 h-10 rounded-full object-cover mr-3" />
             <div>
-              <h4 class="font-display font-bold text-[13px] text-ink">Tom McCabe</h4>
-              <span class="text-[11px] text-faint">Director of SW Engineering, Antares Audio Technologies</span>
+              <h4 id="testimonial-name" class="font-display font-bold text-[13px] text-ink">Tom McCabe</h4>
+              <span id="testimonial-role" class="text-[11px] text-faint">Director of SW Engineering, Antares Audio Technologies</span>
             </div>
           </div>
-        </article>
-        <article class="bg-paper border border-line rounded-lg p-8">
-          <p class="font-display font-light text-[32px] leading-none text-[#c9c5be]" aria-hidden="true">"</p>
-          <p class="text-[14px] leading-[1.8] text-[#374151] mt-5">Fernando is one of those rare developers who combines deep technical expertise with an ability to collaborate seamlessly across design and product. When we worked together, he consistently delivered clean, efficient code while also contributing thoughtful solutions to complex product challenges. He’s reliable, creative, and a real team player — someone I’d be happy to work with again anytime.</p>
-          <div class="flex items-center mt-5">
-            <img src="images/testimonial2.jpg" alt="" class="w-10 h-10 rounded-full object-cover mr-3" />
-            <div>
-              <h4 class="font-display font-bold text-[13px] text-ink">Nate Levin</h4>
-              <span class="text-[11px] text-faint">Group Product Manager – Creator Tools, Antares Audio Technologies</span>
-            </div>
-          </div>
-        </article>
-        <article class="bg-paper border border-line rounded-lg p-8">
-          <p class="font-display font-light text-[32px] leading-none text-[#c9c5be]" aria-hidden="true">"</p>
-          <p class="text-[14px] leading-[1.8] text-[#374151] mt-5">I had direct involvement in the project and team management environment, serving as the Client Success Manager in charge of his client. Therefore, I can certify that he is a person of integrity, stability, and is fully responsible and competent in any task assigned to him.</p>
-          <div class="flex items-center mt-5">
-            <img src="images/testimonial3.jpg" alt="" class="w-10 h-10 rounded-full object-cover mr-3" />
-            <div>
-              <h4 class="font-display font-bold text-[13px] text-ink">Rosa María Montaño Ochoa</h4>
-              <span class="text-[11px] text-faint">Client Success Manager, Encora Inc.</span>
-            </div>
-          </div>
-        </article>
+        </div>
+        <div class="flex mt-6 gap-2">
+          <button type="button" class="testimonial-burger w-2.5 h-2.5 rounded-full bg-accent" data-index="0" aria-label="Testimonial 1"></button>
+          <button type="button" class="testimonial-burger w-2.5 h-2.5 rounded-full bg-line" data-index="1" aria-label="Testimonial 2"></button>
+          <button type="button" class="testimonial-burger w-2.5 h-2.5 rounded-full bg-line" data-index="2" aria-label="Testimonial 3"></button>
+        </div>
       </div>
     </div>
   </section>
@@ -679,7 +663,7 @@
           img.src = testimonials[index].img;
           name.textContent = testimonials[index].name;
           role.textContent = testimonials[index].role;
-          text.textContent = `"${testimonials[index].text}"`;
+          text.textContent = testimonials[index].text;
           burgers.forEach((b, i) => {
             b.classList.toggle('bg-accent', i === index);
             b.classList.toggle('bg-line', i !== index);
