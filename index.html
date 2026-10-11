@@ -4,20 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fernando Amezcua — Senior React Native Developer</title>
+  <title>Fernando Amezcua — Senior Mobile &amp; Full-Stack Software Engineer</title>
 
   <!-- SEO / Meta -->
   <meta name="description"
-    content="Fernando Amezcua - Senior React Native Developer with 8+ years of experience. Portfolio, skills, and projects." />
-  <meta name="keywords" content="React Native, Mobile Developer, Software Engineer, Node.js, iOS, Kotlin, Portfolio" />
+    content="Fernando Amezcua, Senior Mobile and Full-Stack Software Engineer in Colima, Mexico. 10 years building production React Native, TypeScript, Next.js, and Node.js systems for remote teams." />
+  <meta name="keywords" content="React Native, TypeScript, Next.js, Node.js, PostgreSQL, Full-Stack, Mobile Engineer, Software Engineer, Portfolio" />
   <meta name="author" content="Fernando Amezcua" />
 
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <link href="styles/main.css" />
-  <link href="css/aos.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -25,344 +23,266 @@
       theme: {
         extend: {
           colors: {
-            primary: '#0d6efd',
-            secondary: '#6c757d',
-            darkbg: '#1a1a1a',
-            cardbg: '#222222',
-            textlight: '#f5f5f5',
-            textsecondary: '#cfcfcf'
+            paper: '#f7f4ec',
+            ink: '#1e293b',
+            body: '#475569',
+            muted: '#6b7280',
+            faint: '#8b949e',
+            accent: '#4f7cff',
+            line: '#e2ded5',
+            wash: '#f1efe8',
+            chip: '#f1efe8',
+            dark: '#1f2a33',
+            darkline: '#2b3945',
+            night: '#0f1720',
+            field: '#0b1220',
+            nightline: '#334155',
+            snow: '#f9fafb',
+            mist: '#cbd5e1',
+            steel: '#94a3b8',
+            dim: '#64748b'
           },
           fontFamily: {
-            montserrat: ['Montserrat', 'sans-serif']
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
           }
         }
       }
     }
   </script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .pattern { position: relative; }
+    .pattern::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      top: 0;
+      bottom: 0;
+      left: max(16px, calc((100% - 1312px) / 2));
+      right: max(16px, calc((100% - 1312px) / 2));
+      background-image:
+        radial-gradient(circle, rgba(79, 124, 255, 0.12) 8px, transparent 8.5px),
+        linear-gradient(to right, rgba(226, 222, 213, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 222, 213, 0.35) 1px, transparent 1px);
+      background-size: 136px 128px, 72px 72px, 72px 72px;
+      opacity: 0.5;
+    }
+    .pattern-soft::before {
+      background-image:
+        radial-gradient(circle, rgba(79, 124, 255, 0.08) 8px, transparent 8.5px),
+        linear-gradient(to right, rgba(226, 222, 213, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 222, 213, 0.18) 1px, transparent 1px);
+      opacity: 0.3;
+    }
+    .pattern-dark::before {
+      background-image:
+        radial-gradient(circle, rgba(79, 124, 255, 0.12) 8px, transparent 8.5px),
+        linear-gradient(to right, rgba(226, 222, 213, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 222, 213, 0.18) 1px, transparent 1px);
+      opacity: 0.25;
+    }
+    .pattern-contrast::before { opacity: 0.65; }
+    .pattern > * { position: relative; z-index: 1; }
+    #testimonial-card { transition: opacity 0.35s ease; }
+    #testimonial-card.fade { opacity: 0; }
+    .menu-link:hover { color: #4f7cff; }
+    @media (min-width: 768px) {
+      a.contact-link:hover { color: #f7f4ec; }
+    }
+    .job-link i { display: none; }
+    .job-list { list-style: none; margin: 0; padding: 0; }
+    .job-list li { display: flex; gap: 0.625rem; align-items: flex-start; }
+    .job-list li::before { content: "–"; color: #4f7cff; flex: none; }
+  </style>
 </head>
 
-<body class="bg-darkbg font-montserrat text-textlight">
-  <canvas id="galaxy-bg" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+<body class="bg-paper font-sans text-ink">
+  <canvas id="galaxy-bg" class="hidden"></canvas>
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 w-full z-50 bg-darkbg shadow-md">
-    <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
-      <a href="#" class="text-2xl font-bold text-textlight flex-1 text-left">Welcome!</a>
-      <button id="navbar-toggle" class="text-textlight md:hidden focus:outline-none">
-        <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
-        <span class="block w-6 h-0.5 bg-textlight mb-1"></span>
-        <span class="block w-6 h-0.5 bg-textlight"></span>
+  <header class="sticky top-0 w-full z-50 bg-paper border-b border-line">
+    <nav class="container mx-auto flex items-center justify-between py-3 px-4">
+      <a href="#" class="leading-tight">
+        <span class="block font-display font-bold text-sm text-ink">Fernando Amezcua</span>
+        <span class="block text-[10px] uppercase tracking-wide text-faint">Senior Mobile &amp; Full-Stack Engineer</span>
+      </a>
+      <button id="navbar-toggle" class="text-ink md:hidden focus:outline-none" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-ink mb-1"></span>
+        <span class="block w-6 h-0.5 bg-ink mb-1"></span>
+        <span class="block w-6 h-0.5 bg-ink"></span>
       </button>
-      <ul id="navbar-menu" class="hidden md:flex md:space-x-6 font-medium
-              fixed top-16 left-0 w-full bg-darkbg bg-opacity-95 z-50 flex-col space-y-4 py-6 px-4
-              md:static md:bg-transparent md:flex-row md:space-y-0 md:py-0 md:px-0 md:justify-end">
-        <li><a href="#about" class="menu-link block py-2 transition">About</a></li>
-        <li><a href="#skill" class="menu-link block py-2 transition">Skills</a></li>
-        <li><a href="#experience" class="menu-link block py-2 transition">Experience</a></li>
-        <li><a href="#education" class="menu-link block py-2 transition">Education</a></li>
-        <li><a href="#testimonials" class="menu-link block py-2 transition">Testimonials</a></li>
-        <li><a href="#contact" class="menu-link block py-2 transition">Contact</a></li>
+      <ul id="navbar-menu" class="hidden md:flex md:items-center md:gap-7 text-[13px] text-body
+              absolute top-full left-0 w-full bg-paper z-50 flex-col gap-4 py-6 px-4 border-b border-line
+              md:static md:w-auto md:flex-row md:py-0 md:px-0 md:border-0">
+        <li><a href="#about" class="menu-link block py-2">About</a></li>
+        <li><a href="#skill" class="menu-link block py-2">Skills</a></li>
+        <li><a href="#experience" class="menu-link block py-2">Work</a></li>
+        <li><a href="#testimonials" class="menu-link block py-2">Testimonials</a></li>
+        <li><a href="#education" class="menu-link block py-2">Education</a></li>
+        <li><a href="#contact" class="menu-link contact-link block py-2 md:bg-ink md:text-paper md:px-4 md:py-2 md:rounded-[5px]">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="relative h-screen bg-cover bg-center">
-    <!-- Semi-transparent overlay only on the image -->
-    <div class="absolute inset-0 bg-black/30 opacity-80" style="background-image: url('images/cc-bg-1.jpg');"></div>
-
-    <!-- Gradient at bottom -->
-    <div
-      class="absolute z-10 inset-x-0 bottom-0 h-64 bg-gradient-to-t from-darkbg via-darkbg/75 to-transparent pointer-events-none">
-    </div>
-
-    <!-- Content (solid, not transparent) -->
-    <div
-      class="relative z-20 container mx-auto h-full flex flex-col justify-center items-center text-center text-textlight px-4">
-      <div
-        class="w-40 h-40 rounded-full overflow-hidden p-1 bg-gradient-to-br from-blue-400 to-blue-600 shadow-[0_8px_32px_0_rgba(44,120,255,0.25)] transition-transform duration-300 hover:scale-105 mb-4 animate-float">
-        <a href="#">
+  <section class="pattern border-b border-line">
+    <div class="container mx-auto px-4 py-16 md:py-20 flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+      <div class="max-w-xl">
+        <p class="text-[10px] uppercase tracking-wide text-accent">Available · Remote — US &amp; International</p>
+        <p class="text-[11px] uppercase tracking-wide text-faint mt-1">Senior Mobile &amp; Full-Stack Software Engineer · Colima, Mexico</p>
+        <h1 class="font-display font-bold text-[32px] md:text-[38px] leading-[1.1] text-ink mt-5">
+          Building mobile experiences. Engineering the systems behind them.
+        </h1>
+        <p class="text-[15px] leading-[1.7] text-body mt-5">
+          Senior Mobile and Full-Stack Software Engineer with 10 years of experience. I build React Native, TypeScript, and Next.js applications, Node.js APIs, and the testing, CI/CD, cloud, and observability work that keeps them reliable after release.
+        </p>
+        <div class="flex items-center gap-2.5 mt-6">
+          <a href="#contact" class="bg-accent text-white text-[13px] font-semibold px-5 py-[11px] rounded-[5px]">Contact Me</a>
+          <a href="./docs/Sr_Software_Engineer_Fernando_Amezcua.pdf" target="_blank"
+            class="border border-line text-ink text-[13px] font-semibold px-5 py-[11px] rounded-[5px]">View CV</a>
+        </div>
+        <div class="flex items-center gap-5 mt-4 text-[12px] font-medium text-accent">
+          <a href="https://github.com/fernandoamz" target="_blank">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/fernandoamz" target="_blank">LinkedIn ↗</a>
+        </div>
+      </div>
+      <figure class="shrink-0 w-60">
+        <div class="relative w-60">
           <img src="images/fernando.jpg" alt="Fernando Amezcua"
-            class="w-full h-full object-cover rounded-full border-4 border-white shadow-lg" />
-        </a>
-      </div>
-      <h1
-        class="text-5xl md:text-3xl font-extrabold mb-2 bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text drop-shadow-lg">
-        Fernando Amezcua Alcantar
-      </h1>
-      <p class="text-xl md:text-1xl font-semibold text-textsecondary mb-1 tracking-wide">
-        Senior React Native Developer
-      </p>
-      <p class="text-lg text-textsecondary mb-6">
-        Colima, Mexico
-      </p>
-      <a href="./docs/Fernando_Amezcua_CV_Sr_Mobile_Software_Engineer.pdf" target="_blank" class="font-semibold py-3 px-8 rounded-xl text-white text-lg
-              bg-gradient-to-br from-red-400 to-blue-600 shadow-[0_8px_32px_0_rgba(44,120,255,0.35)]
-              hover:from-red-500 hover:to-blue-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)]
-              transition-all duration-300">
-        know my work! - CV
-      </a>
-
-      <div class="flex space-x-5 mt-6">
-        <a href="https://github.com/fernandoamz" target="_blank" class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
-                hover:from-blue-500 hover:to-red-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
-                transition-all duration-300 flex items-center justify-center w-14 h-14">
-          <i class="fab fa-github text-xl text-white"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/fernandoamz" target="_blank" class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
-                hover:from-blue-500 hover:to-red-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
-                transition-all duration-300 flex items-center justify-center w-14 h-14">
-          <i class="fab fa-linkedin text-xl text-white"></i>
-        </a>
-      </div>
+            class="relative z-10 w-60 h-[300px] object-cover rounded-[14px]" />
+          <span class="absolute z-0 -top-2 left-3 -right-2.5 h-[316px] border-t-2 border-r-2 border-b-2 border-accent pointer-events-none" aria-hidden="true"></span>
+        </div>
+        <figcaption class="px-4 pt-3.5">
+          <p class="font-display font-bold text-[13px] text-ink">Fernando Amezcua Alcantar</p>
+          <p class="text-[11px] text-faint mt-1">Colima, Mexico · 10 years experience</p>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="py-16">
-    <h2
-      class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text drop-shadow-lg tracking-tight">
-      About Me!</h2>
+  <section id="about" class="pattern pattern-soft border-b border-line py-16">
     <div class="container mx-auto px-4">
-      <div class="relative w-full max-w-4xl mx-auto p-6 rounded-2xl 
-                bg-gradient-to-br from-white/5 to-white/10 
-                backdrop-blur-md border border-white/10 
-                shadow-xl flex flex-col justify-center items-center" data-aos="fade-up">
-        <!-- About Text and Highlights -->
-        <p class="text-textsecondary text-justify mb-4">
-          Building a mobile app is an exciting journey. Throughout my career, I’ve had the opportunity to work with
-          diverse teams, which has given me a deep understanding of what it takes to build successful applications.
-          <br><br>
-          I am a <span class="text-blue-400 font-semibold">Senior Mobile Engineer</span> with over <span
-            class="font-semibold">8 years of experience</span> developing high-quality cross-platform apps. Proficient
-          in <span class="font-semibold">React Native, Node.js, Firebase, and native modules on iOS and Kotlin</span>, I
-          also bring strong expertise in scalable backend systems, RESTful APIs, and serverless architectures.
-          <br><br>
-          I am passionate about creating performant, user-centric mobile experiences and enjoy teaching others about
-          mobile technologies, including speaking at conferences.
+      <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">About</p>
+      <h2 class="font-display font-bold text-[26px] text-ink mb-8">Professional Summary</h2>
+      <div class="max-w-3xl text-body text-[15px] leading-[1.7] space-y-4" data-aos="fade-up">
+        <p>
+          Senior Software Engineer with 10 years of experience building and scaling production web, mobile, and backend systems for global products. Specialized in React Native, TypeScript, Node.js, and Next.js, with strong experience across mobile, full-stack development, cloud infrastructure, CI/CD, observability, and developer productivity.
         </p>
-        <div class="bg-gray-800 rounded-lg p-4 mb-4 w-full">
-          <h3 class="text-lg font-bold text-textlight mb-2">Here’s how I work differently:</h3>
-          <ul class="list-none space-y-2 text-textsecondary">
-            <li>✓ I focus first on your <span class="font-semibold text-blue-400">business goals</span>, not just the
-              tech stack</li>
-            <li>✓ I design and build <span class="font-semibold text-blue-400">scalable, user-friendly apps</span>
-              people actually enjoy using</li>
-            <li>✓ I deliver <span class="font-semibold text-blue-400">early prototypes</span> so you can validate the
-              product before investing heavily</li>
-            <li>✓ I provide <span class="font-semibold text-blue-400">ongoing support</span> so your app keeps evolving
-              and stays competitive</li>
-          </ul>
-        </div>
-        <div class="mb-4 w-full">
-          <h3 class="text-lg font-bold text-textlight mb-2">Recent work includes:</h3>
-          <ul class="list-disc ml-5 text-textsecondary space-y-1">
-            <li><span class="font-semibold text-blue-400">VocApp by AutoTune®</span> – Pre-Daw Music Production App with
-              20K+ downloads and growing</li>
-            <li><span class="font-semibold text-blue-400">Beanstack By Zoobean™</span> – Reading & education app with
-              500K+ downloads</li>
-            <li><span class="font-semibold text-blue-400">Redeem Coupons By GoPro</span> – Web App for a platform with
-              millions of active users</li>
-            <li><span class="font-semibold text-blue-400">GHX Seed Selector By Syngenta</span> – Maximize Corn & Soybean
-              Yield and Profit Potential with over 1K+ downloads</li>
-            <li><span class="font-semibold text-blue-400">Woodward Logistics</span> – Built internal apps to deliver a
-              better user experience and improve internal processes</li>
-          </ul>
-        </div>
-        <div class="bg-gray-800 rounded-lg p-4 mb-4 w-full">
-          <h3 class="text-lg font-bold text-textlight mb-2">I typically work with businesses that want to:</h3>
-          <ul class="list-none space-y-2 text-textsecondary">
-            <li>→ Reach more customers through mobile</li>
-            <li>→ Turn an idea into a real, revenue-generating app</li>
-            <li>→ Improve operations with custom-built solutions</li>
-            <li>→ Stay competitive with modern, cloud-backed technology</li>
-          </ul>
-        </div>
-        <p class="text-textsecondary text-justify">
-          If you’re planning to launch a mobile app — or if you already have one and want to take it to the next level —
-          <a class="font-semibold text-blue-400" href="#contact">let’s talk about how to do it right.</a>
+        <p>
+          Experienced in AI-assisted software engineering, using Large Language Models (LLMs) and AI coding agents to accelerate codebase exploration, problem-solving, implementation, debugging, testing, and documentation. Proven track record of improving reliability, performance, release processes, and engineering workflows across production systems.
+        </p>
+        <p>
+          Remote-first engineer experienced in collaborating with distributed, cross-functional teams and taking complex technical problems from requirements and investigation through implementation, testing, and production delivery.
         </p>
       </div>
     </div>
   </section>
 
   <!-- SKILLS SECTION -->
-  <section id="skill" class="py-16 bg-darkbg">
+  <section id="skill" class="pattern pattern-dark bg-dark border-b border-darkline py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text drop-shadow-lg tracking-tight">Professional Skills</h2>
+      <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">Expertise</p>
+      <h2 class="font-display font-bold text-[26px] text-paper mb-8">Professional Skills</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Skill Card Example -->
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">React Native</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[90%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Expert</span>
+        <div class="bg-paper border border-line rounded-lg overflow-hidden" data-aos="fade-up">
+          <p class="bg-chip px-4 py-2.5 text-[10px] uppercase text-muted">Core Technologies</p>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">React Native</h3><span class="shrink-0 text-[10px] uppercase bg-accent text-white px-2 py-[3px] rounded-[3px]">Expert</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">React</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Advanced</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Next.js</h3></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">JavaScript / TypeScript</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Advanced</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Node.js</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Advanced</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3"><h3 class="text-[13px] font-normal text-ink">Python</h3></div>
         </div>
-
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">React</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Advanced</span>
+        <div class="bg-paper border border-line rounded-lg overflow-hidden" data-aos="fade-up">
+          <p class="bg-chip px-4 py-2.5 text-[10px] uppercase text-muted">Backend &amp; Infrastructure</p>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Databases (PostgreSQL, MySQL, SQL Server, MongoDB, Realm)</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">CI/CD &amp; Cloud (AWS, GCP, GitHub Actions)</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Firebase &amp; Serverless</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">RESTful APIs &amp; Microservices</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Advanced</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">GraphQL</h3></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3"><h3 class="text-[13px] font-normal text-ink">Observability (Sentry, Datadog, Crashlytics, Amplitude)</h3></div>
         </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">JavaScript / TypeScript</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[85%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Advanced</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Node.js</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Advanced</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Databases (Realm, SQL, Postgres)</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Proficient</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">CI/CD & Cloud (AWS / GCP)</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Proficient</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Firebase & Serverless</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[70%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Proficient</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Native Modules (iOS & Kotlin)</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[60%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Proficient</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">RESTful APIs & Microservices</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[80%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Advanced</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Testing & Quality Assurance</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[65%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Proficient</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Agile & Scrum Methodologies</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[75%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Proficient</span>
-        </div>
-        <div class="relative w-full max-w-md mx-auto p-6 rounded-2xl
-                    bg-gradient-to-br from-white/5 to-white/10
-                    backdrop-blur-md border border-white/10
-                    shadow-xl flex flex-col justify-center items-start" data-aos="fade-up">
-          <h3 class="text-lg font-bold mb-2 text-textlight">Mentoring & Technical Leadership</h3>
-          <div class="w-full bg-gray-800 rounded-full h-4 mb-1">
-            <div class="bg-red-400 h-4 rounded-full w-[80%]"></div>
-          </div>
-          <span class="text-sm text-textsecondary mb-2">Advanced</span>
+        <div class="bg-paper border border-line rounded-lg overflow-hidden" data-aos="fade-up">
+          <p class="bg-chip px-4 py-2.5 text-[10px] uppercase text-muted">Platform &amp; Process</p>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Native Modules (Swift, Kotlin, Expo)</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Mapbox</h3></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Testing (Jest, Detox, React Testing Library)</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Agile &amp; Scrum Methodologies</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3 border-b border-line"><h3 class="text-[13px] font-normal text-ink">Mentoring &amp; Technical Leadership</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Advanced</span></div>
+          <div class="flex items-center justify-between gap-3 px-4 py-3"><h3 class="text-[13px] font-normal text-ink">AI-assisted engineering (Cursor, Copilot, ChatGPT, Claude)</h3><span class="shrink-0 text-[10px] uppercase bg-chip text-muted px-2 py-[3px] rounded-[3px]">Proficient</span></div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="py-16 bg-darkbg">
+  <section id="experience" class="border-b border-line py-16">
     <div class="container mx-auto px-4">
-      <h2
-        class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text drop-shadow-lg tracking-tight">
-        Work Experience
-      </h2>
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
+        <div>
+          <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">Career</p>
+          <h2 class="font-display font-bold text-[26px] text-ink">Work Experience</h2>
+        </div>
+        <a href="./docs/Sr_Software_Engineer_Fernando_Amezcua.pdf" target="_blank" class="text-[12px] text-accent">Download CV ↗</a>
+      </div>
+
+      <!-- Limestone Digital -->
+      <div class="w-full border-b border-line" data-aos="fade-up">
+        <div class="md:flex md:gap-8">
+          <div class="md:w-56 shrink-0 py-6 md:pr-8">
+            <p class="text-[11px] text-faint">Sep 2025 - Present</p>
+            <h3 class="font-display font-bold text-[15px] text-ink mt-1">Limestone Digital</h3>
+            <p class="text-[12px] text-muted mt-1 leading-relaxed">Senior Mobile Software Engineer — OneRail · Remote</p>
+          </div>
+          <div class="flex-1 py-6">
+            <ul class="job-list text-[13px] text-body leading-relaxed space-y-1.5">
+              <li>Work across OneRail’s last-mile stack: driver mobile apps, backend services, and OmniPoint, on mobile, web, and backend.</li>
+              <li>Build and maintain React Native apps for Android and iOS, including routing, stop lifecycle, background location, permissions, and native SDK integrations.</li>
+              <li>Develop backend services for authentication, organization settings, delivery data, and business logic used by mobile and web.</li>
+              <li>Design and maintain PostgreSQL tables, relationships, queries, indexes, and data models for those workflows.</li>
+              <li>Investigate fleet and operational issues from logs, metrics, and stakeholder questions through root cause, implementation, testing, and production delivery.</li>
+              <li>Own Android and iOS build and release workflows and keep the apps production-ready.</li>
+              <li>Use LLMs and AI coding agents to explore the codebase, trace dependencies, investigate production issues, and support implementation, debugging, testing, documentation, and review.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <!-- Encora -->
-      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
-              backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
+      <div class="w-full border-b border-line" data-aos="fade-up">
+        <div class="md:flex md:gap-8">
           <!-- Side Panel -->
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p class="text-sm opacity-90">Nov 2023 - Present</p>
-            <h3 class="text-2xl font-semibold mt-2">Encora México</h3>
+          <div class="md:w-56 shrink-0 py-6 md:pr-8">
+            <p class="text-[11px] text-faint">Nov 2023 - Sep 2025</p>
+            <h3 class="font-display font-bold text-[15px] text-ink mt-1">Encora México</h3>
+            <p class="text-[12px] text-muted mt-1 leading-relaxed">Senior Mobile Software Engineer — VoCap by Auto-Tune · Remote</p>
           </div>
 
           <!-- Content -->
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
-              Senior React Native Developer, VoCap By AutoTune
-            </h4>
-            <ul class="list-disc ml-5 text-textsecondary space-y-2">
-              <li>Co-led VoCap with Staff Engineer app using React Native and Audio Native iOS modules.</li>
-              <li>Optimized audio performance with AudioEngine and JUCE.</li>
-              <li>Scaled the application to 20K+ installs and maintained a 3.7-star rating across diverse user segments.
-              </li>
-              <li>Delivered the app to the stores, implementing new features and bringing the product to market.</li>
-              <li>Developed a custom gallery module to retrieve and manage videos and audio files directly from the
-                device.</li>
-              <li>Enhanced video and audio capture flow in React Native by integrating native iOS modules.</li>
-              <li>Supervised new releases and semantic versioning.</li>
-              <li>Built the A/B testing infrastructure with feature flags in Firebase.</li>
+          <div class="flex-1 py-6">
+            <ul class="job-list text-[13px] text-body leading-relaxed space-y-1.5">
+              <li>Co-led VoCap by Auto-Tune, a React Native app with native iOS modules and audio processing, including AudioEngine and JUCE.</li>
+              <li>Helped launch and scale the app to 20K+ downloads in the first 5 months, with a 3.7-star rating.</li>
+              <li>Integrated AI-powered audio, including AudioShake and separation workflows for vocal and instrumental tracks.</li>
+              <li>Built native iOS recording pipelines, a device gallery for audio and video, and audio and video mixing.</li>
+              <li>Designed AUv3 plugin support for DAWs such as GarageBand, Logic Pro, and FL Studio.</li>
+              <li>Co-led a product redesign using user behavior and analytics, and built A/B testing with Firebase feature flags.</li>
+              <li>Improved release tooling to 10–15 day cycles, including semantic versioning.</li>
+              <li>Used LLMs to explore the codebase, investigate issues, and speed up implementation, refactoring, and documentation.</li>
             </ul>
 
             <!-- Links -->
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4">
               <a href="https://www.encora.com/" target="_blank"
-                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
+                class="job-link text-[11px] text-accent">
                 Visit Website
               </a>
               <a href="https://apps.apple.com/us/app/vocap-by-autotune/id6740216111" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
+                class="job-link text-[11px] text-accent">
                 <i class="fab fa-apple text-2xl mr-2"></i>
                 <span>View on App Store</span>
               </a>
@@ -372,38 +292,37 @@
       </div>
 
       <!-- Luxoft -->
-      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
-              backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p class="text-sm opacity-90">Dec 2021 - Nov 2023</p>
-            <h3 class="text-2xl font-semibold mt-2">Luxoft México, DXC Company</h3>
+      <div class="w-full border-b border-line" data-aos="fade-up">
+        <div class="md:flex md:gap-8">
+          <div class="md:w-56 shrink-0 py-6 md:pr-8">
+            <p class="text-[11px] text-faint">Dec 2021 - Nov 2023</p>
+            <h3 class="font-display font-bold text-[15px] text-ink mt-1">Luxoft México, DXC Company</h3>
+            <p class="text-[12px] text-muted mt-1 leading-relaxed">Mobile Software Engineer — GHX Platform · Remote</p>
           </div>
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
-              React Native — GHX Platform
-            </h4>
-            <ul class="list-disc ml-5 text-textsecondary space-y-2">
-              <li>Cut crash rate from 10% to &lt;3% and enhanced API request performance.</li>
-              <li>Developed modular map components and standardized global state management using Redux.</li>
-              <li>Optimized map rendering performance during GeoJSON data retrieval with Redux Toolkit.</li>
-              <li>Centralized all API requests in the app using Redux Thunk.</li>
-              <li>Applied A/B testing for new features.</li>
-              <li>Contributed to micro frontends by adding native iOS/Android features.</li>
+          <div class="flex-1 py-6">
+            <ul class="job-list text-[13px] text-body leading-relaxed space-y-1.5">
+              <li>Developed React Native and Node.js solutions for the GHX digital agriculture platform, supporting 1K+ active users.</li>
+              <li>Built Mapbox modules for field visualization, navigation, and management, including GeoJSON rendering with Redux Toolkit.</li>
+              <li>Cut the crash rate from about 10% to below 3% through error handling, testing, debugging, and performance work.</li>
+              <li>Improved API response times by about 30% and centralized API requests with Redux Thunk.</li>
+              <li>Contributed reusable libraries to a micro frontend architecture, including native iOS and Android features.</li>
+              <li>Helped design A/B tests and contributed to R&amp;D for AI-powered features, analytics, payments, and new mobile capabilities.</li>
+              <li>Used GitHub Copilot and ChatGPT to explore the codebase, implement, debug, and refactor.</li>
+              <li>Integrated AWS services specified by the backend team.</li>
             </ul>
 
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4">
               <a href="https://www.luxoft.com/" target="_blank"
-                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
+                class="job-link text-[11px] text-accent">
                 Visit Website
               </a>
               <a href="https://apps.apple.com/mx/app/ghx-seed/id1582859873" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
+                class="job-link text-[11px] text-accent">
                 <i class="fab fa-apple text-2xl mr-2"></i>
                 <span>View on App Store</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.mobilereactnativeghx" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
+                class="job-link text-[11px] text-accent">
                 <i class="fab fa-google-play text-2xl mr-2"></i>
                 <span>View on Play Store</span>
               </a>
@@ -413,42 +332,39 @@
       </div>
 
       <!-- MagmaLabs -->
-      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
-              backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p class="text-sm opacity-90">Jan 2020 - Nov 2021</p>
-            <h3 class="text-2xl font-semibold mt-2">MagmaLabs</h3>
+      <div class="w-full border-b border-line" data-aos="fade-up">
+        <div class="md:flex md:gap-8">
+          <div class="md:w-56 shrink-0 py-6 md:pr-8">
+            <p class="text-[11px] text-faint">Jan 2020 - Nov 2021</p>
+            <h3 class="font-display font-bold text-[15px] text-ink mt-1">MagmaLabs</h3>
+            <p class="text-[12px] text-muted mt-1 leading-relaxed">Mobile Software Engineer — Beanstack &amp; Quik for GoPro · Remote</p>
           </div>
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
-              Software Engineer — Beanstack & Quik for GoPro
-            </h4>
-            <ul class="list-disc ml-5 text-textsecondary space-y-2">
-              <li>Led gamification and subscriptions for the Beanstack app.</li>
-              <li>Architected scalable code and implemented CI/CD pipelines.</li>
-              <li>Built Quik for GoPro using Next.js, TypeScript, OAuth2, and Adyen.</li>
-              <li>Resolved on-demand service requests promptly, meeting all deadlines.</li>
-              <li>Solved Server-Side Rendering challenges and deployed to AWS and Datadog services.</li>
+          <div class="flex-1 py-6">
+            <ul class="job-list text-[13px] text-body leading-relaxed space-y-1.5">
+              <li>Led frontend architecture for Beanstack, a React and Node.js app with 500K+ downloads, including gamification and subscriptions.</li>
+              <li>Built Quik for GoPro with Next.js, TypeScript, OAuth 2.0, and Adyen, supporting 100K+ monthly users.</li>
+              <li>Contributed Ruby on Rails to MagmaLabs’ website and completed a Ruby on Rails Developer course.</li>
+              <li>Designed CI/CD pipelines, improved server-side rendering performance, and deployed with AWS and Datadog.</li>
+              <li>Mentored junior engineers on frontend architecture, performance, and code quality.</li>
             </ul>
 
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4">
               <a href="https://www.magmalabs.io" target="_blank"
-                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
+                class="job-link text-[11px] text-accent">
                 Visit Website
               </a>
               <a href="https://gopro.com/redeemquik" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
+                class="job-link text-[11px] text-accent">
                 <i class="fa fa-camera text-2xl mr-2"></i>
                 <span>GoPro Website</span>
               </a>
               <a href="https://apps.apple.com/es/app/beanstack-tracker/id1360324277" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
+                class="job-link text-[11px] text-accent">
                 <i class="fab fa-apple text-2xl mr-2"></i>
                 <span>View on App Store</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.beanstack&hl=es_419" target="_blank"
-                class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full shadow-md hover:bg-gray-800 transition-all">
+                class="job-link text-[11px] text-accent">
                 <i class="fab fa-google-play text-2xl mr-2"></i>
                 <span>View on Play Store</span>
               </a>
@@ -458,37 +374,30 @@
       </div>
 
       <!-- Woodward Card -->
-      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
-            backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
+      <div class="w-full border-b border-line" data-aos="fade-up">
+        <div class="md:flex md:gap-8">
           <!-- Side Panel -->
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p class="text-sm opacity-90">October 2017 - January 2019</p>
-            <h3 class="text-2xl font-semibold mt-2">Logística Woodward</h3>
+          <div class="md:w-56 shrink-0 py-6 md:pr-8">
+            <p class="text-[11px] text-faint">Oct 2017 – Jan 2020</p>
+            <h3 class="font-display font-bold text-[15px] text-ink mt-1">Woodward Logistics</h3>
+            <p class="text-[12px] text-muted mt-1 leading-relaxed">Mobile Software Engineer · Remote</p>
           </div>
 
           <!-- Content -->
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
-              Head of Mobile Development / Fullstack Developer
-            </h4>
-            <ul class="list-disc ml-5 text-textsecondary space-y-2">
-              <li>Led the Mobile Development department, managing the full live mobile cycle.</li>
-              <li>Built a multimedia documentation system using React, Next.js, MSSQL, MySQL, Redux, and Redux Thunk.
-              </li>
-              <li>Developed two React Native apps for logistics teams, published on the Play Store.</li>
-              <li>Designed and implemented fullstack solutions, integrating front-end and back-end with scalable APIs
-                and databases.</li>
-              <li>Collaborated with non-technical stakeholders to gather requirements and implement technical solutions.
-              </li>
-              <li>Maintained production, staging, and test environments, managing Linux infrastructure on VPS servers.
-              </li>
+          <div class="flex-1 py-6">
+            <ul class="job-list text-[13px] text-body leading-relaxed space-y-1.5">
+              <li>Co-led mobile development with React Native and web development with React, Next.js, and Node.js.</li>
+              <li>Built logistics systems on SQL Server and MySQL with Redux, including a multimedia documentation system.</li>
+              <li>Developed REST APIs and backend services with Node.js and Flask.</li>
+              <li>Published two React Native apps on the Google Play Store.</li>
+              <li>Integrated AWS and GCP to support backend scale and infrastructure cost.</li>
+              <li>Maintained Linux VPS environments for production, staging, and test.</li>
             </ul>
 
             <!-- Links -->
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4">
               <a href="http://woodward.mx/" target="_blank"
-                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
+                class="job-link text-[11px] text-accent">
                 Visit Website
               </a>
             </div>
@@ -497,32 +406,28 @@
       </div>
 
       <!-- Desarrollo 80 Card -->
-      <div class="w-full mb-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 
-            backdrop-blur-md border border-white/10 shadow-xl overflow-hidden" data-aos="fade-up">
-        <div class="md:flex">
+      <div class="w-full border-b border-line" data-aos="fade-up">
+        <div class="md:flex md:gap-8">
           <!-- Side Panel -->
-          <div class="md:w-1/4 bg-red-400 text-white p-6">
-            <p class="text-sm opacity-90">December 2016 - October 2017</p>
-            <h3 class="text-2xl font-semibold mt-2">Desarrollo 80</h3>
+          <div class="md:w-56 shrink-0 py-6 md:pr-8">
+            <p class="text-[11px] text-faint">Dec 2016 – Nov 2017</p>
+            <h3 class="font-display font-bold text-[15px] text-ink mt-1">D80</h3>
+            <p class="text-[12px] text-muted mt-1 leading-relaxed">Junior Software Engineer · Remote</p>
           </div>
 
           <!-- Content -->
-          <div class="md:w-3/4 p-6">
-            <h4 class="text-xl font-bold mb-4 text-textlight leading-tight">
-              FullStack Developer
-            </h4>
-            <ul class="list-disc ml-5 text-textsecondary space-y-2">
-              <li>Developed UIs using PHP, JavaScript, Dojo, and REST APIs.</li>
-              <li>Built reusable components and supported a modular design approach.</li>
-              <li>Collaborated with non-technical stakeholders to gather requirements and communicate technical
-                limitations and opportunities effectively.</li>
-              <li>Contributed to architecture, testing, and requirements discussions.</li>
+          <div class="flex-1 py-6">
+            <ul class="job-list text-[13px] text-body leading-relaxed space-y-1.5">
+              <li>Developed modular web interfaces with PHP, JavaScript, and Dojo.</li>
+              <li>Built and integrated REST APIs for web applications.</li>
+              <li>Collaborated on software testing, documentation, and application maintenance.</li>
+              <li>Worked with stakeholders to define requirements and deliver web solutions.</li>
             </ul>
 
             <!-- Links -->
-            <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-4">
               <a href="http://www.d80.mx/" target="_blank"
-                class="px-6 py-3 border border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all">
+                class="job-link text-[11px] text-accent">
                 Visit Website
               </a>
             </div>
@@ -536,47 +441,44 @@
 
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-16 bg-darkbg">
+  <section id="testimonials" class="pattern pattern-dark pattern-contrast bg-dark border-b border-darkline py-16">
     <div class="container mx-auto px-4">
-      <h2
-        class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text drop-shadow-lg tracking-tight">
-        Testimonials
-      </h2>
-      <div class="flex flex-col items-center">
-        <!-- Glassmorphism Testimonial Card -->
-        <div id="testimonial-card" class="relative w-full max-w-md p-6 rounded-2xl
-           bg-gradient-to-br from-white/5 to-white/10
-           backdrop-blur-md border border-white/10
-           shadow-xl flex flex-col transition-all duration-500
-           min-h-[300px]">
-          <!-- Profile -->
-          <div class="flex items-center mb-6 w-full min-h-[72px]">
-            <img id="testimonial-img" src="images/testimonial1.jpg" alt="Person 1"
-              class="w-16 h-16 rounded-full border-2 border-red-400 shadow-md object-cover mr-4" />
-            <div class="flex flex-col">
-              <h4 id="testimonial-name" class="text-lg font-semibold text-textlight">
-                Ana Martínez
-              </h4>
-              <span id="testimonial-role" class="text-sm text-textsecondary">
-                Product Manager, Encora
-              </span>
+      <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">Testimonials</p>
+      <h2 class="font-display font-bold text-[26px] text-paper mb-8">What colleagues say</h2>
+      <div class="flex flex-col gap-5">
+        <article class="bg-paper border border-line rounded-lg p-8">
+          <p class="font-display font-light text-[32px] leading-none text-[#c9c5be]" aria-hidden="true">"</p>
+          <p class="text-[14px] leading-[1.8] text-[#374151] mt-5">I am pleased to recommend Fernando Amezcua for opportunities as a mobile developer. During his contract engagement with our team, Fernando demonstrated a high level of professionalism, strong technical abilities, and a thoughtful, team-oriented approach to his work.</p>
+          <div class="flex items-center mt-5">
+            <img src="images/testimonial1.jpg" alt="" class="w-10 h-10 rounded-full object-cover mr-3" />
+            <div>
+              <h4 class="font-display font-bold text-[13px] text-ink">Tom McCabe</h4>
+              <span class="text-[11px] text-faint">Director of SW Engineering, Antares Audio Technologies</span>
             </div>
           </div>
-          <!-- Quote -->
-          <p id="testimonial-text" class="text-textsecondary italic text-center leading-relaxed flex-1">
-            "Fernando is a fantastic developer! His attention to detail and ability
-            to deliver on time made our project a success."
-          </p>
-        </div>
-        <!-- Navigation -->
-        <div class="flex justify-center mt-6 space-x-3">
-          <button class="testimonial-burger w-3.5 h-3.5 rounded-full bg-red-400 
-               shadow-sm opacity-80" data-index="0"></button>
-          <button class="testimonial-burger w-3.5 h-3.5 rounded-full bg-white/10 
-               border border-red-400 opacity-50" data-index="1"></button>
-          <button class="testimonial-burger w-3.5 h-3.5 rounded-full bg-white/10 
-               border border-red-400 opacity-50" data-index="2"></button>
-        </div>
+        </article>
+        <article class="bg-paper border border-line rounded-lg p-8">
+          <p class="font-display font-light text-[32px] leading-none text-[#c9c5be]" aria-hidden="true">"</p>
+          <p class="text-[14px] leading-[1.8] text-[#374151] mt-5">Fernando is one of those rare developers who combines deep technical expertise with an ability to collaborate seamlessly across design and product. When we worked together, he consistently delivered clean, efficient code while also contributing thoughtful solutions to complex product challenges. He’s reliable, creative, and a real team player — someone I’d be happy to work with again anytime.</p>
+          <div class="flex items-center mt-5">
+            <img src="images/testimonial2.jpg" alt="" class="w-10 h-10 rounded-full object-cover mr-3" />
+            <div>
+              <h4 class="font-display font-bold text-[13px] text-ink">Nate Levin</h4>
+              <span class="text-[11px] text-faint">Group Product Manager – Creator Tools, Antares Audio Technologies</span>
+            </div>
+          </div>
+        </article>
+        <article class="bg-paper border border-line rounded-lg p-8">
+          <p class="font-display font-light text-[32px] leading-none text-[#c9c5be]" aria-hidden="true">"</p>
+          <p class="text-[14px] leading-[1.8] text-[#374151] mt-5">I had direct involvement in the project and team management environment, serving as the Client Success Manager in charge of his client. Therefore, I can certify that he is a person of integrity, stability, and is fully responsible and competent in any task assigned to him.</p>
+          <div class="flex items-center mt-5">
+            <img src="images/testimonial3.jpg" alt="" class="w-10 h-10 rounded-full object-cover mr-3" />
+            <div>
+              <h4 class="font-display font-bold text-[13px] text-ink">Rosa María Montaño Ochoa</h4>
+              <span class="text-[11px] text-faint">Client Success Manager, Encora Inc.</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -584,107 +486,131 @@
 
 
   <!-- EDUCATION SECTION -->
-  <section id="education" class="py-16 bg-darkbg">
+  <section id="education" class="border-b border-line py-16">
     <div class="container mx-auto px-4">
-      <h2
-        class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text drop-shadow-lg tracking-tight">
-        Education</h2>
+      <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">Education</p>
+      <h2 class="font-display font-bold text-[26px] text-ink mb-8">Academic Background</h2>
 
-      <!-- Education Card 1 -->
-      <div class="relative w-full max-w-3xl mx-auto mb-6 p-6 rounded-2xl 
-                bg-gradient-to-br from-white/5 to-white/10 
-                backdrop-blur-md border border-white/10 
-                shadow-xl flex flex-col transition-all duration-500" data-aos="fade-up">
-        <h4 class="text-lg font-semibold text-textlight mb-1">Information Technologies Engineer</h4>
-        <span class="text-sm text-textsecondary block mb-3">2013 - 2017 · Universidad Tecnológica de Manzanillo</span>
-        <p class="text-textsecondary mb-4">
-          The Technology Information Engineer is a professional with capabilities to develop mobile applications,
-          object-oriented apps, and responsive websites connected with a database.
-        </p>
-        <a href="https://utem.edu.mx/" target="_blank"
-          class="self-start px-6 py-2 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
-          Visit Website
-        </a>
-      </div>
-
-      <!-- Education Card 2 -->
-      <div class="relative w-full max-w-3xl mx-auto mb-6 p-6 rounded-2xl 
-                bg-gradient-to-br from-white/5 to-white/10 
-                backdrop-blur-md border border-white/10 
-                shadow-xl flex flex-col transition-all duration-500" data-aos="fade-up">
-        <h4 class="text-lg font-semibold text-textlight mb-1">Bright Coders Mentoring Program</h4>
-        <span class="text-sm text-textsecondary block mb-3">2018 · Bright Coders</span>
-        <p class="text-textsecondary mb-4">
-          An intensive on-site mentoring program designed to train talented software developers
-          who adopt best practices, work with agile methodologies, collaborate in real environments,
-          and contribute to the community.
-        </p>
-        <a href="./docs/brigthcoders.pdf" target="_blank"
-          class="self-start px-6 py-2 border-2 border-red-400 text-red-400 font-semibold rounded-full hover:bg-red-400 hover:text-white transition-all duration-300">
-          Certificate
-        </a>
+      <div class="border border-line rounded-lg divide-y divide-line" data-aos="fade-up">
+        <div class="p-7 md:flex md:gap-8">
+          <div class="md:w-52 shrink-0 mb-3 md:mb-0">
+            <p class="text-[11px] text-faint">2013 – 2017</p>
+            <p class="text-[13px] text-ink mt-1">Universidad Tecnológica de Manzanillo</p>
+            <a href="https://utem.edu.mx/" target="_blank" class="text-[11px] text-accent mt-2 inline-block">utem.edu.mx ↗</a>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-[15px] text-ink">Information Technologies Engineer</h4>
+            <p class="text-[13px] text-body leading-relaxed mt-2">Professional with capabilities to develop mobile applications, object-oriented apps, and responsive websites connected with a database.</p>
+          </div>
+        </div>
+        <div class="p-7 md:flex md:gap-8">
+          <div class="md:w-52 shrink-0 mb-3 md:mb-0">
+            <p class="text-[11px] text-faint">2018</p>
+            <p class="text-[13px] text-ink mt-1">Bright Coders</p>
+            <a href="./docs/brigthcoders.pdf" target="_blank" class="text-[11px] text-accent mt-2 inline-block">Certificate ↗</a>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-[15px] text-ink">Bright Coders Mentoring Program</h4>
+            <p class="text-[13px] text-body leading-relaxed mt-2">An intensive on-site mentoring program designed to train talented software developers who adopt best practices, work with agile methodologies, collaborate in real environments, and contribute to the community.</p>
+          </div>
+        </div>
+        <div class="p-7 md:flex md:gap-8">
+          <div class="md:w-52 shrink-0 mb-3 md:mb-0">
+            <p class="text-[11px] text-faint">01 Feb 2019</p>
+            <p class="text-[13px] text-ink mt-1">BrightCoders</p>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-[15px] text-ink">Ruby on Rails Developer</h4>
+            <p class="text-[13px] text-body leading-relaxed mt-2">Hands-on course on Rails applications and backend functionality.</p>
+          </div>
+        </div>
+        <div class="p-7 md:flex md:gap-8">
+          <div class="md:w-52 shrink-0 mb-3 md:mb-0">
+            <p class="text-[11px] text-faint">September 29, 2026</p>
+            <p class="text-[13px] text-ink mt-1">Duolingo English Test</p>
+            <a href="https://certs.duolingo.com/iqq8if8gc4dr93ci" target="_blank" rel="noopener noreferrer" class="text-[11px] text-accent mt-2 inline-block">Certificate ↗</a>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-[15px] text-ink">English Proficiency</h4>
+            <p class="text-[13px] text-body leading-relaxed mt-2">Overall 100 · CEFR B2</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-16 bg-darkbg">
+  <section id="contact" class="bg-night border-b border-nightline py-[72px]">
     <div class="container mx-auto px-4">
-      <h2
-        class="text-4xl font-extrabold text-center mb-8 bg-gradient-to-r from-blue-400 to-red-400 text-transparent bg-clip-text drop-shadow-lg tracking-tight">
-        Contact Me
-      </h2>
-      <!-- Contact Card -->
-      <div class="relative w-full max-w-lg mx-auto p-8 rounded-2xl 
-                bg-gradient-to-br from-white/5 to-white/10 
-                backdrop-blur-md border border-white/10 
-                shadow-xl transition-all duration-500" data-aos="fade-up">
-        <form id="contact-form" class="space-y-6">
+      <p class="text-[10px] uppercase tracking-wide text-accent mb-1.5">Contact</p>
+      <h2 class="font-display font-bold text-[26px] text-snow">Get in touch</h2>
+      <p class="text-[14px] leading-[1.6] text-mist mt-1.5 mb-12">Let's talk about your next project.</p>
+      <div class="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-14">
+        <form id="contact-form" class="w-full lg:w-[560px] lg:shrink-0 space-y-4">
           <div>
-            <label for="name" class="block text-textlight font-semibold mb-2">Name</label>
-            <input type="text" id="name" name="name" required
-              class="w-full px-4 py-2 rounded-lg bg-gray-800/70 text-textlight border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition" />
+            <label for="name" class="block text-snow text-[12px] font-medium mb-1.5">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name"
+              class="w-full px-3.5 py-[11px] rounded-[5px] bg-field text-snow text-[13px] border border-nightline placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent" />
           </div>
           <div>
-            <label for="email" class="block text-textlight font-semibold mb-2">Email</label>
-            <input type="email" id="email" name="email" required
-              class="w-full px-4 py-2 rounded-lg bg-gray-800/70 text-textlight border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition" />
+            <label for="email" class="block text-snow text-[12px] font-medium mb-1.5">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com"
+              class="w-full px-3.5 py-[11px] rounded-[5px] bg-field text-snow text-[13px] border border-nightline placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent" />
           </div>
           <div>
-            <label for="message" class="block text-textlight font-semibold mb-2">Message</label>
-            <textarea id="message" name="message" rows="5" required
-              class="w-full px-4 py-2 rounded-lg bg-gray-800/70 text-textlight border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-400 transition"></textarea>
+            <label for="message" class="block text-snow text-[12px] font-medium mb-1.5">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project…"
+              class="w-full px-3.5 py-[11px] rounded-[5px] bg-field text-snow text-[13px] border border-nightline placeholder:text-steel focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
           </div>
           <button type="submit"
-            class="w-full py-3 bg-red-400 text-white font-bold rounded-lg hover:bg-red-500 transition-all duration-300">
+            class="bg-accent text-snow text-[13px] font-semibold px-6 py-3 rounded-[5px]">
             Send Message
           </button>
-          <p id="contact-status" class="mt-4 text-center text-textsecondary"></p>
+          <p id="contact-status" class="text-[13px] text-steel"></p>
         </form>
+        <div class="text-[13px] lg:pt-0 space-y-6">
+          <div>
+            <p class="text-[10px] uppercase tracking-wide text-dim mb-3">Connect</p>
+            <a href="https://github.com/fernandoamz" target="_blank" class="block text-mist font-medium mb-2">GitHub — github.com/fernandoamz ↗</a>
+            <a href="https://www.linkedin.com/in/fernandoamz" target="_blank" class="block text-mist font-medium mb-2">LinkedIn — in/fernandoamz ↗</a>
+            <a href="./docs/Sr_Software_Engineer_Fernando_Amezcua.pdf" target="_blank" class="block text-mist font-medium">Download CV PDF ↗</a>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase tracking-wide text-dim mb-1.5">Email</p>
+            <a href="mailto:fernandoamz148@gmail.com" class="text-snow">fernandoamz148@gmail.com</a>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase tracking-wide text-dim mb-1.5">Phone</p>
+            <a href="tel:+523141316370" class="text-snow">+52 314 131 63 70</a>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase tracking-wide text-dim mb-1.5">Location</p>
+            <p class="text-snow">Colima, Mexico · Available Remote (US &amp; International)</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- FOOTER -->
-  <footer class="bg-gradient-to-br from-darkbg via-gray-900 to-darkbg/80 py-10 mt-12 border-t border-white/10">
-    <div class="container mx-auto px-4 flex flex-col items-center">
-      <div class="flex space-x-4 mb-6">
-        <a href="https://github.com/fernandoamz" target="_blank" class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
-          hover:from-blue-500 hover:to-red-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
-          transition-all duration-300 flex items-center justify-center w-14 h-14">
-          <i class="fab fa-github text-xl text-white"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/fernandoamz" target="_blank" class="bg-gradient-to-br from-red-400 to-blue-600 rounded-full shadow-[0_8px_32px_0_rgba(44,120,255,0.35)] 
-                hover:from-blue-500 hover:to-red-700 hover:shadow-[0_12px_48px_0_rgba(44,120,255,0.45)] 
-                transition-all duration-300 flex items-center justify-center w-14 h-14">
-          <i class="fab fa-linkedin text-xl text-white"></i>
-        </a>
+  <footer class="bg-night py-10">
+    <div class="container mx-auto px-4 flex flex-col gap-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h4 class="font-display font-bold text-sm text-snow">Fernando Amezcua Alcantar</h4>
+          <p class="text-[12px] text-steel mt-1">Thanks for visiting! Amazing things start with a small idea. Let's do awesome things together.</p>
+        </div>
+        <div class="flex gap-5 text-[12px] text-mist">
+          <a href="https://github.com/fernandoamz" target="_blank">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/fernandoamz" target="_blank">LinkedIn ↗</a>
+          <a href="./docs/Sr_Software_Engineer_Fernando_Amezcua.pdf" target="_blank">CV ↗</a>
+        </div>
       </div>
-      <h4 class="text-xl font-semibold text-textlight mb-2">Thanks for visiting!</h4>
-      <p class="text-textsecondary mb-2">Amazing things start with a small idea.</p>
-      <p class="text-textsecondary text-sm mb-4">Let's do awesome things together.</p>
-      <div class="w-full h-px bg-white/10 my-4"></div>
-      <p class="text-xs text-textsecondary">&copy; 2025 Fernando Amezcua. All rights reserved.</p>
+      <div class="w-full h-px bg-nightline"></div>
+      <div class="flex items-center justify-between gap-4 text-[11px] text-dim">
+        <p>&copy; 2025 Fernando Amezcua. All rights reserved.</p>
+        <a href="#">Back to top ↑</a>
+      </div>
     </div>
   </footer>
 
@@ -729,46 +655,44 @@
       } */
     ];
 
-    let current = 0;
     const card = document.getElementById('testimonial-card');
-    const img = document.getElementById('testimonial-img');
-    const name = document.getElementById('testimonial-name');
-    const role = document.getElementById('testimonial-role');
-    const text = document.getElementById('testimonial-text');
-    const burgers = document.querySelectorAll('.testimonial-burger');
+    if (card) {
+      let current = 0;
+      const img = document.getElementById('testimonial-img');
+      const name = document.getElementById('testimonial-name');
+      const role = document.getElementById('testimonial-role');
+      const text = document.getElementById('testimonial-text');
+      const burgers = document.querySelectorAll('.testimonial-burger');
 
-    function showTestimonial(index) {
-      card.classList.add('fade');
-      setTimeout(() => {
-        img.src = testimonials[index].img;
-        name.textContent = testimonials[index].name;
-        role.textContent = testimonials[index].role;
-        text.textContent = `"${testimonials[index].text}"`;
-        burgers.forEach((b, i) => {
-          b.classList.toggle('bg-red-400', i === index);
-          b.classList.toggle('bg-cardbg', i !== index);
-          b.classList.toggle('opacity-80', i === index);
-          b.classList.toggle('opacity-50', i !== index);
+      function showTestimonial(index) {
+        card.classList.add('fade');
+        setTimeout(() => {
+          img.src = testimonials[index].img;
+          name.textContent = testimonials[index].name;
+          role.textContent = testimonials[index].role;
+          text.textContent = `"${testimonials[index].text}"`;
+          burgers.forEach((b, i) => {
+            b.classList.toggle('bg-accent', i === index);
+            b.classList.toggle('bg-line', i !== index);
+          });
+          current = index;
+          card.classList.remove('fade');
+        }, 350);
+      }
+
+      burgers.forEach((b, i) => {
+        b.addEventListener('click', () => {
+          showTestimonial(i);
         });
-        current = index;
-        card.classList.remove('fade');
-      }, 350);
-    }
-
-    burgers.forEach((b, i) => {
-      b.addEventListener('click', () => {
-        showTestimonial(i);
       });
-    });
 
-    // Auto change every 5 seconds
-    setInterval(() => {
-      let next = (current + 1) % testimonials.length;
-      showTestimonial(next);
-    }, 10000);
+      setInterval(() => {
+        let next = (current + 1) % testimonials.length;
+        showTestimonial(next);
+      }, 10000);
 
-    // Initialize
-    showTestimonial(0);
+      showTestimonial(0);
+    }
 
     // Galaxy background animation
     const canvas = document.getElementById('galaxy-bg');
